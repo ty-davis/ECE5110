@@ -1,4 +1,4 @@
-** sch_path: /home/tydavis/magic/library/xschem/nand.sch
+** sch_path: /home/tydav/magic/library/xschem/nand.sch
 **.subckt nand A Y B
 *.ipin A
 *.opin Y
