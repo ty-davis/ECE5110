@@ -1,0 +1,16 @@
+** sch_path: /home/tydavis/temp/test_latch
+**.subckt test_latch
+M1 net4 net2 GND M2N7002 m=1
+M2 net1 net6 net4 M2N7002 m=1
+M3 net2 net1 GND M2N7002 m=1
+M4 net2 net1 VDD DMP2035U m=1
+M5 net1 net5 net3 DMP2035U m=1
+M6 net3 net2 VDD DMP2035U m=1
+M7 net7 net5 net1 M2N7002 m=1
+M8 net7 net6 net1 DMP2035U m=1
+V1 net5 GND 3
+V1 net6 GND 3
+**.ends
+.GLOBAL GND
+.GLOBAL VDD
+.end

@@ -1,0 +1,94 @@
+magic
+tech sky130A
+timestamp 1738780557
+<< nwell >>
+rect -2 197 161 488
+<< nmos >>
+rect 72 65 87 115
+<< pmos >>
+rect 72 315 87 415
+<< ndiff >>
+rect 36 107 72 115
+rect 36 73 44 107
+rect 61 73 72 107
+rect 36 65 72 73
+rect 87 107 123 115
+rect 87 73 98 107
+rect 115 73 123 107
+rect 87 65 123 73
+<< pdiff >>
+rect 36 407 72 415
+rect 36 323 44 407
+rect 61 323 72 407
+rect 36 315 72 323
+rect 87 407 123 415
+rect 87 323 98 407
+rect 115 323 123 407
+rect 87 315 123 323
+<< ndiffc >>
+rect 44 73 61 107
+rect 98 73 115 107
+<< pdiffc >>
+rect 44 323 61 407
+rect 98 323 115 407
+<< psubdiff >>
+rect 0 10 12 38
+rect 147 10 159 38
+<< nsubdiff >>
+rect 16 442 28 470
+rect 131 442 143 470
+<< psubdiffcont >>
+rect 12 10 147 38
+<< nsubdiffcont >>
+rect 28 442 131 470
+<< poly >>
+rect 72 415 87 428
+rect 72 181 87 315
+rect 39 173 87 181
+rect 39 156 47 173
+rect 64 156 87 173
+rect 39 148 87 156
+rect 72 115 87 148
+rect 72 52 87 65
+<< polycont >>
+rect 47 156 64 173
+<< locali >>
+rect 0 470 159 480
+rect 0 442 28 470
+rect 131 442 159 470
+rect 0 432 159 442
+rect 36 407 69 432
+rect 36 323 44 407
+rect 61 323 69 407
+rect 36 315 69 323
+rect 90 407 123 415
+rect 90 323 98 407
+rect 115 323 123 407
+rect 39 173 72 181
+rect 39 156 47 173
+rect 64 156 72 173
+rect 39 148 72 156
+rect 36 107 69 115
+rect 36 73 44 107
+rect 61 73 69 107
+rect 36 48 69 73
+rect 90 107 123 323
+rect 90 73 98 107
+rect 115 73 123 107
+rect 90 65 123 73
+rect 0 38 159 48
+rect 0 10 12 38
+rect 147 10 159 38
+rect 0 0 159 10
+<< labels >>
+flabel locali 0 432 159 480 0 FreeSerif 80 0 0 0 VDD!
+port 2 nsew
+flabel locali 0 0 159 48 0 FreeSerif 80 0 0 0 GND!
+port 3 nsew
+flabel locali 39 148 72 181 0 FreeSerif 80 0 0 0 A
+port 4 nsew
+flabel locali 90 65 123 415 0 FreeSerif 80 0 0 0 Y
+port 5 nsew
+flabel ndiff 72 90 72 90 1 FreeSerif 8 0 0 0 S$
+flabel pdiff 72 365 72 365 1 FreeSerif 8 0 0 0 S$
+<< end >>
