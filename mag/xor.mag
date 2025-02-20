@@ -1,6 +1,6 @@
 magic
 tech sky130A
-timestamp 1740000184
+timestamp 1740075295
 << nwell >>
 rect -2 197 323 488
 << nmos >>
@@ -190,4 +190,8 @@ flabel locali 0 0 321 48 0 FreeSerif 80 0 0 0 GND!
 port 3 nsew
 flabel locali 0 432 321 480 0 FreeSerif 80 0 0 0 VDD!
 port 2 nsew
+flabel ndiff 87 135 87 135 1 FreeSerif 8 0 0 0 S$
+flabel ndiff 126 137 126 137 1 FreeSerif 8 0 0 0 S$
+flabel ndiff 180 137 180 137 1 FreeSerif 8 0 0 0 S$
+flabel ndiff 249 138 249 138 1 FreeSerif 8 0 0 0 S$
 << end >>

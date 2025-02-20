@@ -1,4 +1,4 @@
-** sch_path: /home/tydavis/magic/library/xschem/tristate_tb.sch
+** sch_path: /home/tydav/magic/library/xschem/tristate_tb.sch
 **.subckt tristate_tb
 V1 VDD GND 1.8
 V2 A GND pulse 0 1.8 '0.495/ 1e6 ' '0.01/1e6 ' '0.01/1e6 ' '0.49/1e6 ' '1/1e6 '
@@ -18,23 +18,23 @@ plot V(A) V(EN)+2 V(Y)+4
 
 
 ** opencircuitdesign pdks install
-.lib /usr/magic/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+.lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
 
 
 **** end user architecture code
 **.ends
 
 * expanding   symbol:  tristate.sym # of pins=4
-** sym_path: /home/tydavis/magic/library/xschem/tristate.sym
-** sch_path: /home/tydavis/magic/library/xschem/tristate.sch
+** sym_path: /home/tydav/magic/library/xschem/tristate.sym
+** sch_path: /home/tydav/magic/library/xschem/tristate.sch
 .subckt tristate ~EN A Y EN
 *.ipin A
 *.opin Y
 *.ipin EN
 *.ipin ~EN
-XM1 Y EN net1 net1 sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
+XM1 Y EN net1 GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM2 Y ~EN net2 net2 sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
+XM2 Y ~EN net2 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM3 net1 A GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
@@ -44,8 +44,8 @@ XM4 net2 A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W
 
 
 * expanding   symbol:  lab1/inv.sym # of pins=2
-** sym_path: /home/tydavis/magic/library/xschem/lab1/inv.sym
-** sch_path: /home/tydavis/magic/library/xschem/lab1/inv.sch
+** sym_path: /home/tydav/magic/library/xschem/lab1/inv.sym
+** sch_path: /home/tydav/magic/library/xschem/lab1/inv.sch
 .subckt inv Y A
 *.ipin A
 *.opin Y

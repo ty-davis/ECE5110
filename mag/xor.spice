@@ -1,0 +1,13 @@
+* NGSPICE file created from xor.ext - technology: sky130A
+
+*.subckt xor VDD GND Y A ~B ~A B
+X0 GND A a_72_226# GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.18 ps=1.72 w=0.5 l=0.15
+X1 a_72_226# ~B GND GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.0975 ps=0.89 w=0.5 l=0.15
+X2 Y ~A a_72_226# GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.0975 ps=0.89 w=0.5 l=0.15
+X3 a_174_630# A VDD VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.36 ps=2.72 w=1 l=0.15
+X4 Y ~B a_174_630# VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.195 ps=1.39 w=1 l=0.15
+X5 a_72_226# B Y GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.0975 ps=0.89 w=0.5 l=0.15
+X6 a_390_630# ~A Y VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.195 ps=1.39 w=1 l=0.15
+X7 VDD B a_390_630# VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.195 ps=1.39 w=1 l=0.15
+*.ends
+

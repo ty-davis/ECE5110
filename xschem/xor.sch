@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -30,7 +29,7 @@ lab=Y}
 N 200 -260 200 -230 {
 lab=#net1}
 N 360 -260 360 -230 {
-lab=#net2}
+lab=#net1}
 N 200 -170 360 -170 {
 lab=GND}
 N 250 -170 250 -140 {
@@ -54,25 +53,26 @@ lab=VDD}
 N 320 -540 320 -420 {
 lab=VDD}
 N 200 -480 200 -450 {
-lab=#net3}
+lab=#net2}
 N 360 -480 360 -450 {
-lab=#net4}
+lab=#net3}
 N 120 -510 160 -510 {
 lab=A}
 N 120 -420 160 -420 {
 lab=~B}
 N 400 -420 440 -420 {
-lab=B}
-N 400 -510 440 -510 {
 lab=~A}
+N 400 -510 440 -510 {
+lab=B}
 N 400 -290 440 -290 {
 lab=B}
 N 400 -200 440 -200 {
-lab=B}
+lab=A}
 N 120 -200 160 -200 {
 lab=~B}
 N 120 -290 160 -290 {
 lab=~A}
+N 200 -240 360 -240 {lab=#net1}
 C {sky130_fd_pr/nfet_01v8.sym} 180 -290 0 0 {name=M1
 L=0.15
 W=0.5
@@ -190,8 +190,9 @@ spiceprefix=X
 }
 C {devices/ipin.sym} 120 -510 0 0 {name=p6 lab=A}
 C {devices/ipin.sym} 120 -420 0 0 {name=p7 lab=~B}
-C {devices/ipin.sym} 440 -510 0 1 {name=p8 lab=~A}
-C {devices/ipin.sym} 440 -420 0 1 {name=p9 lab=B}
+C {devices/ipin.sym} 440 -510 0 1 {name=p8 lab=B}
+C {devices/ipin.sym} 440 -420 0 1 {name=p9 lab=~A
+}
 C {devices/lab_wire.sym} 130 -290 0 0 {name=p10 sig_type=std_logic lab=~A}
 C {devices/lab_wire.sym} 440 -290 0 0 {name=p1 sig_type=std_logic lab=B}
 C {devices/lab_wire.sym} 130 -200 0 0 {name=p3 sig_type=std_logic lab=~B}
