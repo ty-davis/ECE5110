@@ -1,23 +1,23 @@
 
-Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
-Equate elements:  no current cell.
-Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
-
 Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
 Equate elements:  no current cell.
 Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
 
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
 Subcircuit summary:
-Circuit 1: mag/tristate.spice              |Circuit 2: spice/tristate.spice            
+Circuit 1: mag/aoi22.spice                 |Circuit 2: spice/aoi22.spice               
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__nfet_01v8 (2)                |sky130_fd_pr__nfet_01v8 (2)                
-sky130_fd_pr__pfet_01v8 (2)                |sky130_fd_pr__pfet_01v8 (2)                
-Number of devices: 4                       |Number of devices: 4                       
-Number of nets: 8                          |Number of nets: 8                          
+sky130_fd_pr__pfet_01v8 (4)                |sky130_fd_pr__pfet_01v8 (4)                
+sky130_fd_pr__nfet_01v8 (4)                |sky130_fd_pr__nfet_01v8 (4)                
+Number of devices: 8                       |Number of devices: 8                       
+Number of nets: 9                          |Number of nets: 9                          
 ---------------------------------------------------------------------------------------
 Netlists match uniquely.
 Cells have no pins;  pin matching not needed.
-Device classes mag/tristate.spice and spice/tristate.spice are equivalent.
+Device classes mag/aoi22.spice and spice/aoi22.spice are equivalent.
 
 Final result: Circuits match uniquely.
 .

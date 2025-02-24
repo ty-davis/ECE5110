@@ -1,0 +1,13 @@
+* NGSPICE file created from aoi22.ext - technology: sky130A
+
+*.subckt aoi22 VDD GND Y C A D B
+X0 VDD D a_174_560# VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.195 ps=1.39 w=1 l=0.15
+X1 Y B a_72_174# GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.1077 ps=1.01 w=0.5 l=0.15
+X2 GND C a_72_174# GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.18 ps=1.72 w=0.5 l=0.15
+X3 a_72_174# D Y GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.0975 ps=0.89 w=0.5 l=0.15
+X4 a_72_174# A GND GND sky130_fd_pr__nfet_01v8 ad=0.1077 pd=1.01 as=0.0975 ps=0.89 w=0.5 l=0.15
+X5 a_174_560# C VDD VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.36 ps=2.72 w=1 l=0.15
+X6 Y A a_174_560# VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.195 ps=1.39 w=1 l=0.15
+X7 a_174_560# B Y VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.195 ps=1.39 w=1 l=0.15
+*.ends
+
