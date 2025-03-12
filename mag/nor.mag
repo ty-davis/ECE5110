@@ -1,13 +1,13 @@
 magic
 tech sky130A
-timestamp 1739945136
+timestamp 1741797781
 << nwell >>
 rect -2 197 215 488
 << nmos >>
 rect 72 65 87 115
 rect 126 65 141 115
 << pmos >>
-rect 72 315 87 415
+rect 90 315 105 415
 rect 126 315 141 415
 << ndiff >>
 rect 36 107 72 115
@@ -23,11 +23,11 @@ rect 141 73 152 107
 rect 169 73 177 107
 rect 141 65 177 73
 << pdiff >>
-rect 36 407 72 415
-rect 36 323 44 407
-rect 61 323 72 407
-rect 36 315 72 323
-rect 87 315 126 415
+rect 54 407 90 415
+rect 54 323 62 407
+rect 79 323 90 407
+rect 54 315 90 323
+rect 105 315 126 415
 rect 141 407 177 415
 rect 141 323 152 407
 rect 169 323 177 407
@@ -37,7 +37,7 @@ rect 44 73 61 107
 rect 98 73 115 107
 rect 152 73 169 107
 << pdiffc >>
-rect 44 323 61 407
+rect 62 323 79 407
 rect 152 323 169 407
 << psubdiff >>
 rect 0 10 12 38
@@ -50,10 +50,10 @@ rect 12 10 201 38
 << nsubdiffcont >>
 rect 28 442 185 470
 << poly >>
-rect 72 415 87 428
+rect 90 415 105 428
 rect 126 415 141 428
-rect 72 305 87 315
-rect 44 290 87 305
+rect 90 305 105 315
+rect 44 290 105 305
 rect 44 181 59 290
 rect 126 260 141 315
 rect 93 252 141 260
@@ -76,10 +76,10 @@ rect 0 470 213 480
 rect 0 442 28 470
 rect 185 442 213 470
 rect 0 432 213 442
-rect 36 407 69 432
-rect 36 323 44 407
-rect 61 323 69 407
-rect 36 315 69 323
+rect 54 407 87 432
+rect 54 323 62 407
+rect 79 323 87 407
+rect 54 315 87 323
 rect 144 407 177 415
 rect 144 323 152 407
 rect 169 323 177 407
@@ -111,7 +111,6 @@ rect 201 10 213 38
 rect 0 0 213 10
 << labels >>
 flabel ndiff 72 90 72 90 1 FreeSerif 8 0 0 0 S$
-flabel pdiff 72 365 72 365 1 FreeSerif 8 0 0 0 S$
 flabel locali 39 148 72 181 0 FreeSerif 80 0 0 0 B
 port 8 nsew
 flabel locali 144 148 177 315 0 FreeSerif 80 0 0 0 Y
@@ -124,4 +123,5 @@ flabel ndiff 141 90 141 90 1 FreeSerif 8 0 0 0 S$
 flabel pdiff 126 365 126 365 1 FreeSerif 8 0 0 0 S$
 flabel locali 93 227 126 260 0 FreeSerif 80 0 0 0 A
 port 4 nsew
+flabel pdiff 90 365 90 365 1 FreeSerif 8 0 0 0 S$
 << end >>
