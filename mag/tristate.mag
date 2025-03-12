@@ -1,14 +1,14 @@
 magic
 tech sky130A
-timestamp 1739990900
+timestamp 1741799890
 << nwell >>
-rect -2 197 215 488
+rect 3 197 189 488
 << nmos >>
 rect 72 65 87 115
 rect 108 65 123 115
 << pmos >>
 rect 72 315 87 415
-rect 126 315 141 415
+rect 108 315 123 415
 << ndiff >>
 rect 36 107 72 115
 rect 36 73 44 107
@@ -24,109 +24,107 @@ rect 36 407 72 415
 rect 36 323 44 407
 rect 61 323 72 407
 rect 36 315 72 323
-rect 87 315 126 415
-rect 141 407 177 415
-rect 141 323 152 407
-rect 169 323 177 407
-rect 141 315 177 323
+rect 87 315 108 415
+rect 123 407 159 415
+rect 123 323 134 407
+rect 151 323 159 407
+rect 123 315 159 323
 << ndiffc >>
 rect 44 73 61 107
 rect 134 73 151 107
 << pdiffc >>
 rect 44 323 61 407
-rect 152 323 169 407
+rect 134 323 151 407
 << psubdiff >>
-rect 0 10 12 38
-rect 201 10 213 38
+rect 5 10 17 38
+rect 175 10 187 38
 << nsubdiff >>
-rect 16 442 28 470
-rect 185 442 197 470
+rect 21 442 33 470
+rect 159 442 171 470
 << psubdiffcont >>
-rect 12 10 201 38
+rect 17 10 175 38
 << nsubdiffcont >>
-rect 28 442 185 470
+rect 33 442 159 470
 << poly >>
 rect 72 415 87 428
-rect 126 415 141 428
-rect 72 301 87 315
-rect 36 286 87 301
-rect 36 252 52 286
-rect 126 262 141 315
-rect 19 244 52 252
-rect 19 227 27 244
-rect 44 227 52 244
-rect 90 254 141 262
-rect 90 237 98 254
-rect 115 245 141 254
-rect 115 237 123 245
-rect 90 229 123 237
-rect 19 219 52 227
-rect 36 148 52 219
-rect 90 194 123 202
-rect 90 177 98 194
-rect 115 177 123 194
-rect 90 169 123 177
-rect 36 133 87 148
-rect 72 115 87 133
-rect 108 115 123 169
+rect 108 415 123 428
+rect 72 298 87 315
+rect 33 290 87 298
+rect 33 273 41 290
+rect 58 283 87 290
+rect 58 273 66 283
+rect 33 265 66 273
+rect 36 138 52 265
+rect 108 246 123 315
+rect 75 238 123 246
+rect 75 221 83 238
+rect 100 231 123 238
+rect 100 221 108 231
+rect 75 213 108 221
+rect 75 184 108 192
+rect 75 167 83 184
+rect 100 167 123 184
+rect 75 159 123 167
+rect 36 123 87 138
+rect 72 115 87 123
+rect 108 115 123 159
 rect 72 52 87 65
 rect 108 52 123 65
 << polycont >>
-rect 27 227 44 244
-rect 98 237 115 254
-rect 98 177 115 194
+rect 41 273 58 290
+rect 83 221 100 238
+rect 83 167 100 184
 << locali >>
-rect 0 470 213 480
-rect 0 442 28 470
-rect 185 442 213 470
-rect 0 432 213 442
+rect 5 470 187 480
+rect 5 442 33 470
+rect 159 442 187 470
+rect 5 432 187 442
 rect 36 407 69 432
 rect 36 323 44 407
 rect 61 323 69 407
 rect 36 315 69 323
-rect 144 407 177 415
-rect 144 323 152 407
-rect 169 323 177 407
-rect 90 254 123 262
-rect 19 244 52 252
-rect 19 227 27 244
-rect 44 227 52 244
-rect 90 237 98 254
-rect 115 237 123 254
-rect 90 229 123 237
-rect 19 219 52 227
-rect 90 194 123 202
-rect 90 177 98 194
-rect 115 177 123 194
-rect 90 169 123 177
-rect 144 115 177 323
+rect 126 407 159 415
+rect 126 323 134 407
+rect 151 323 159 407
+rect 33 290 66 298
+rect 33 273 41 290
+rect 58 273 66 290
+rect 33 265 66 273
+rect 75 238 108 246
+rect 75 221 83 238
+rect 100 221 108 238
+rect 75 213 108 221
+rect 75 184 108 192
+rect 75 167 83 184
+rect 100 167 108 184
+rect 75 159 108 167
 rect 36 107 69 115
 rect 36 73 44 107
 rect 61 73 69 107
 rect 36 48 69 73
-rect 126 107 177 115
+rect 126 107 159 323
 rect 126 73 134 107
-rect 151 73 177 107
-rect 126 65 177 73
-rect 0 38 213 48
-rect 0 10 12 38
-rect 201 10 213 38
-rect 0 0 213 10
+rect 151 73 159 107
+rect 126 65 159 73
+rect 5 38 187 48
+rect 5 10 17 38
+rect 175 10 187 38
+rect 5 0 187 10
 << labels >>
 flabel ndiff 72 90 72 90 1 FreeSerif 8 0 0 0 S$
 flabel pdiff 72 365 72 365 1 FreeSerif 8 0 0 0 S$
+flabel pdiff 108 365 108 365 1 FreeSerif 8 0 0 0 S$
 flabel ndiff 108 90 108 90 1 FreeSerif 8 0 0 0 S$
-flabel locali 0 432 213 480 0 FreeSerif 80 0 0 0 VDD!
-port 2 nsew
-flabel locali 145 65 177 290 0 FreeSerif 80 0 0 0 Y
+flabel locali 126 115 159 315 0 FreeSerif 80 0 0 0 Y
 port 5 nsew
-flabel locali 0 0 213 48 0 FreeSerif 80 0 0 0 GND!
-port 3 nsew
-flabel locali 19 219 52 252 0 FreeSerif 80 0 0 0 A
-port 4 nsew
-flabel locali 90 169 123 202 0 FreeSerif 80 0 0 0 EN
+flabel locali 75 159 108 192 0 FreeSerif 80 0 0 0 EN
 port 8 nsew
-flabel locali 90 229 123 262 0 FreeSerif 80 0 0 0 ~EN
+flabel locali 75 213 108 246 0 FreeSerif 80 0 0 0 ~EN
 port 9 nsew
-flabel pdiff 126 365 126 365 1 FreeSerif 8 0 0 0 S$
+flabel locali 33 265 66 298 0 FreeSerif 80 0 0 0 A
+port 4 nsew
+flabel locali 5 432 187 480 0 FreeSerif 80 0 0 0 VDD!
+port 2 nsew
+flabel locali 5 0 187 48 0 FreeSerif 80 0 0 0 GND!
+port 3 nsew
 << end >>
