@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -354,7 +353,6 @@ C {devices/gnd.sym} 570 -130 2 0 {name=l8 lab=GND}
 C {devices/lab_wire.sym} 570 -290 0 0 {name=p5 sig_type=std_logic lab=~CLK}
 C {devices/lab_wire.sym} 570 -50 0 0 {name=p7 sig_type=std_logic lab=CLK}
 C {devices/vdd.sym} 840 -340 0 1 {name=l1 lab=VDD}
-C {devices/gnd.sym} 690 -400 0 0 {name=l2 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} 1220 -260 1 0 {name=M1
 L=0.15
 W=1
@@ -441,12 +439,10 @@ model=nfet_01v8
 spiceprefix=X
 }
 C {devices/vdd.sym} 1320 -630 0 0 {name=l10 lab=VDD}
-C {devices/gnd.sym} 1490 -120 0 1 {name=l11 lab=GND}
 C {devices/gnd.sym} 1220 -130 2 0 {name=l12 lab=GND}
 C {devices/lab_wire.sym} 1220 -290 0 0 {name=p9 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 1220 -50 0 0 {name=p10 sig_type=std_logic lab=~CLK}
 C {devices/vdd.sym} 1490 -340 0 1 {name=l13 lab=VDD}
-C {devices/gnd.sym} 1340 -400 0 0 {name=l14 lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} 1000 -590 1 0 {name=M15
 L=0.15
 W=1
@@ -479,3 +475,6 @@ C {devices/vdd.sym} 1000 -550 2 0 {name=l15 lab=VDD}
 C {devices/gnd.sym} 1000 -460 2 0 {name=l16 lab=GND}
 C {devices/lab_wire.sym} 1000 -370 0 0 {name=p8 sig_type=std_logic lab=CLK}
 C {devices/lab_wire.sym} 1000 -630 0 0 {name=p11 sig_type=std_logic lab=~CLK}
+C {devices/lab_wire.sym} 690 -400 0 0 {name=p12 sig_type=std_logic lab=GND}
+C {devices/lab_wire.sym} 1340 -400 0 0 {name=p13 sig_type=std_logic lab=GND}
+C {devices/lab_wire.sym} 1490 -120 0 0 {name=p14 sig_type=std_logic lab=GND}

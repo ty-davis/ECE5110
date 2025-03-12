@@ -8,16 +8,16 @@ Equate elements:  no current cell.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
 
 Subcircuit summary:
-Circuit 1: mag/aoi22.spice                 |Circuit 2: spice/aoi22.spice               
+Circuit 1: mag/dff.spice                   |Circuit 2: spice/dff.spice                 
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__pfet_01v8 (4)                |sky130_fd_pr__pfet_01v8 (4)                
-sky130_fd_pr__nfet_01v8 (4)                |sky130_fd_pr__nfet_01v8 (4)                
-Number of devices: 8                       |Number of devices: 8                       
-Number of nets: 9                          |Number of nets: 9                          
+sky130_fd_pr__pfet_01v8 (8)                |sky130_fd_pr__pfet_01v8 (8)                
+sky130_fd_pr__nfet_01v8 (8)                |sky130_fd_pr__nfet_01v8 (8)                
+Number of devices: 16                      |Number of devices: 16                      
+Number of nets: 11                         |Number of nets: 11                         
 ---------------------------------------------------------------------------------------
 Netlists match uniquely.
 Cells have no pins;  pin matching not needed.
-Device classes mag/aoi22.spice and spice/aoi22.spice are equivalent.
+Device classes mag/dff.spice and spice/dff.spice are equivalent.
 
 Final result: Circuits match uniquely.
 .

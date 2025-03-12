@@ -1,0 +1,21 @@
+* NGSPICE file created from dff.ext - technology: sky130A
+
+*.subckt dff D ~CLK CLK ~Q Q VDD GND
+X0 a_1026_130# ~CLK a_524_130# VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.36 ps=2.72 w=1 l=0.15
+X1 a_174_130# ~CLK D GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.18 ps=1.72 w=0.5 l=0.15
+X2 a_524_130# a_174_130# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.36 ps=2.72 w=1 l=0.15
+X3 Q a_1026_130# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.36 ps=2.72 w=1 l=0.15
+X4 a_282_130# CLK a_174_130# GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.0975 ps=0.89 w=0.5 l=0.15
+X5 ~Q ~CLK a_1026_130# GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.0975 ps=0.89 w=0.5 l=0.15
+X6 ~Q Q GND GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.18 ps=1.72 w=0.5 l=0.15
+X7 a_174_130# CLK D VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.36 ps=2.72 w=1 l=0.15
+X8 a_282_130# ~CLK a_174_130# VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.195 ps=1.39 w=1 l=0.15
+X9 a_282_130# a_524_130# GND GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.18 ps=1.72 w=0.5 l=0.15
+X10 ~Q CLK a_1026_130# VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.195 ps=1.39 w=1 l=0.15
+X11 ~Q Q VDD VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.36 ps=2.72 w=1 l=0.15
+X12 a_282_130# a_524_130# VDD VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.36 ps=2.72 w=1 l=0.15
+X13 a_1026_130# CLK a_524_130# GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.18 ps=1.72 w=0.5 l=0.15
+X14 a_524_130# a_174_130# GND GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.18 ps=1.72 w=0.5 l=0.15
+X15 Q a_1026_130# GND GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.18 ps=1.72 w=0.5 l=0.15
+*.ends
+
