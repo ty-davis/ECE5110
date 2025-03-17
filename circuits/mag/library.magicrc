@@ -1,0 +1,3 @@
+puts stdout "I AM HERE LOOK AT ME Sourcing design .magicrc from the library"
+
+addpath /home/tydavis/magic/library/mag
