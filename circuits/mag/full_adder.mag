@@ -1,0 +1,42 @@
+magic
+tech sky130A
+timestamp 1742393477
+<< nwell >>
+rect 2 432 1690 480
+<< psubdiff >>
+rect 2 10 1690 38
+<< locali >>
+rect 2 432 1690 480
+rect 401 206 434 239
+rect 1247 206 1280 239
+rect 775 148 920 181
+rect 1621 148 1654 315
+rect 2 0 1690 48
+<< metal1 >>
+rect 41 181 74 298
+rect 507 181 540 297
+rect 1353 181 1386 297
+use half_adder  half_adder_0
+timestamp 1742357947
+transform 1 0 163 0 1 0
+box -163 0 683 488
+use half_adder  half_adder_1
+timestamp 1742357947
+transform 1 0 1009 0 1 0
+box -163 0 683 488
+<< labels >>
+flabel metal1 41 181 74 298 0 FreeSerif 80 0 0 0 A
+port 2 nsew
+flabel metal1 507 181 540 297 0 FreeSerif 80 0 0 0 B
+port 3 nsew
+flabel locali 401 206 434 239 0 FreeSerif 80 0 0 0 S0
+port 5 nsew
+flabel locali 1247 206 1280 239 0 FreeSerif 80 0 0 0 S1
+port 6 nsew
+flabel metal1 1353 181 1386 297 0 FreeSerif 80 0 0 0 Ci
+port 4 nsew
+flabel locali 1621 148 1654 315 0 FreeSerif 80 0 0 0 Co
+port 7 nsew
+flabel locali 2 0 1690 48 0 FreeSerif 80 0 0 0 GND!
+flabel locali 2 432 1690 480 0 FreeSerif 80 0 0 0 VDD!
+<< end >>

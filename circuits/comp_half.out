@@ -75,7 +75,7 @@ Cell pin lists are equivalent.
 Device classes nor and nor are equivalent.
 
 Subcircuit summary:
-Circuit 1: half_adder                      |Circuit 2: half_adder                      
+Circuit 1: mag/half_adder.spice            |Circuit 2: ../library/spice/half_adder.spi 
 -------------------------------------------|-------------------------------------------
 xor (1)                                    |xor (1)                                    
 inv (2)                                    |inv (2)                                    
@@ -84,30 +84,8 @@ Number of devices: 4                       |Number of devices: 4
 Number of nets: 8                          |Number of nets: 8                          
 ---------------------------------------------------------------------------------------
 Netlists match uniquely.
-
-Subcircuit pins:
-Circuit 1: half_adder                      |Circuit 2: half_adder                      
--------------------------------------------|-------------------------------------------
-B                                          |B                                          
-A                                          |A                                          
-S                                          |S                                          
-C                                          |C                                          
-GND                                        |GND                                        
-VDD                                        |VDD                                        
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes half_adder and half_adder are equivalent.
-
-Subcircuit summary:
-Circuit 1: mag/full_adder.spice            |Circuit 2: ../library/spice/full_adder.spi 
--------------------------------------------|-------------------------------------------
-half_adder (2)                             |half_adder (2)                             
-Number of devices: 2                       |Number of devices: 2                       
-Number of nets: 9                          |Number of nets: 9                          
----------------------------------------------------------------------------------------
-Netlists match uniquely.
 Cells have no pins;  pin matching not needed.
-Device classes mag/full_adder.spice and ../library/spice/full_adder.spice are equivalent.
+Device classes mag/half_adder.spice and ../library/spice/half_adder.spice are equivalent.
 
 Final result: Circuits match uniquely.
 .
