@@ -1,127 +1,216 @@
-timestamp 1742393477
+timestamp 1742396458
 version 8.3
 tech sky130A
 style ngspice()
 scale 1000 1 500000
 resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use nor nor_0 1 0 3388 0 1 0
+use inv inv_0 1 0 3822 0 1 0
 use half_adder half_adder_1 1 0 2018 0 1 0
 use half_adder half_adder_0 1 0 326 0 1 0
 port "Ci" 4 2706 362 2772 594 m1
 port "B" 3 1014 362 1080 594 m1
 port "A" 2 82 362 148 596 m1
-port "Co" 7 3242 296 3308 630 li
-port "S1" 6 2494 412 2560 478 li
-port "S0" 5 802 412 868 478 li
-node "Ci" 0 125.128 2706 362 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15312 596 0 0 0 0 0 0 0 0 0 0
-node "B" 0 114.317 1014 362 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15312 596 0 0 0 0 0 0 0 0 0 0
-node "A" 0 116.148 82 362 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15444 600 0 0 0 0 0 0 0 0 0 0
-node "GND!" 450 1530.99 4 0 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 324096 6944 0 0 0 0 0 0 0 0 0 0 0 0
-node "Co" 65 163.013 3242 296 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 22044 800 0 0 0 0 0 0 0 0 0 0 0 0
-node "li_1550_296#" 56 107.316 1550 296 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 19140 712 0 0 0 0 0 0 0 0 0 0 0 0
-node "S1" 13 43.2493 2494 412 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4356 264 0 0 0 0 0 0 0 0 0 0 0 0
-node "S0" 13 46.4766 802 412 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4356 264 0 0 0 0 0 0 0 0 0 0 0 0
-node "VDD!" 450 1250.11 4 864 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 324096 6944 0 0 0 0 0 0 0 0 0 0 0 0
-node "w_4_864#" 33408 972.288 4 864 nw 0 0 0 0 324096 6944 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-substrate "a_4_20#" 0 0 4 20 ppd 0 0 0 0 0 0 0 0 0 0 189056 6864 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-cap "Ci" "VDD!" 2.01195
-cap "VDD!" "S1" 4.06522
-cap "li_1550_296#" "GND!" 32.4342
-cap "Ci" "GND!" 2.05801
-cap "B" "S1" 0.0544514
-cap "li_1550_296#" "Co" 1.17692
-cap "S1" "GND!" 4.89244
+port "Co" 6 4002 230 4068 630 li
+port "S" 5 2494 412 2560 478 li
+node "Ci" 0 100.311 2706 362 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15312 596 0 0 0 0 0 0 0 0 0 0
+node "B" 0 71.0115 1014 362 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15312 596 0 0 0 0 0 0 0 0 0 0
+node "A" 0 114.984 82 362 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15444 600 0 0 0 0 0 0 0 0 0 0
+node "GND!" 551 1859.36 4 0 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 397056 8464 0 0 0 0 0 0 0 0 0 0 0 0
+node "Co" 78 181.915 4002 230 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 26400 932 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_3724_296#" 40 66.914 3724 296 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 13596 544 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_3242_296#" 45 85.4787 3242 296 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 15312 596 0 0 0 0 0 0 0 0 0 0 0 0
+node "S" 13 44.8176 2494 412 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4356 264 0 0 0 0 0 0 0 0 0 0 0 0
+node "li_802_412#" 15 547.47 802 412 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4356 264 92088 2944 0 0 0 0 0 0 0 0 0 0
+node "li_1566_544#" 80 1110.4 1566 544 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2312 272 176471 5460 0 0 0 0 0 0 0 0 0 0
+node "VDD!" 551 1519.93 4 864 li 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 397056 8464 0 0 0 0 0 0 0 0 0 0 0 0
+node "w_4_864#" 40929 1191.17 4 864 nw 0 0 0 0 397056 8464 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+substrate "a_4_20#" 0 0 4 20 ppd 0 0 0 0 0 0 0 0 0 0 231616 8384 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "li_3724_296#" "VDD!" 9.91132
+cap "li_802_412#" "GND!" 53.9972
+cap "li_3724_296#" "GND!" 23.0395
+cap "A" "li_1566_544#" 0.0606061
+cap "Co" "li_1566_544#" 3.47811
+cap "li_3242_296#" "li_1566_544#" 12.9523
+cap "Ci" "li_1566_544#" 24.929
+cap "w_4_864#" "VDD!" 367.178
+cap "B" "li_1566_544#" 5.41538
+cap "S" "li_1566_544#" 1.23561
+cap "VDD!" "li_1566_544#" 361.797
+cap "Co" "Ci" 0.141774
+cap "GND!" "li_1566_544#" 14.2897
+cap "li_802_412#" "li_1566_544#" 70.0003
+cap "A" "B" 5.57205
+cap "Co" "S" 1.00612
 cap "A" "VDD!" 2.03972
-cap "Ci" "Co" 1.54845
-cap "B" "VDD!" 2.01195
-cap "S1" "Co" 2.37042
-cap "VDD!" "GND!" 92.5176
-cap "w_4_864#" "VDD!" 299.708
-cap "A" "B" 11.1441
-cap "S0" "VDD!" 4.06522
+cap "Co" "VDD!" 6.42366
 cap "A" "GND!" 2.06298
-cap "VDD!" "Co" 6.42366
-cap "B" "GND!" 2.05801
-cap "A" "S0" 0.238981
-cap "S0" "B" 2.93961
-cap "Ci" "S1" 2.93961
-cap "S0" "GND!" 4.89244
-cap "VDD!" "li_1550_296#" 13.9528
-cap "Co" "GND!" 7.38158
-cap "half_adder_0/xor_0/~B" "half_adder_1/xor_0/~B" 1.3037
-cap "half_adder_0/A" "half_adder_1/xor_0/VDD!" -2.03972
-cap "half_adder_0/xor_0/~B" "half_adder_1/A" 0.278778
-cap "half_adder_0/B" "half_adder_1/A" 7.01138
-cap "half_adder_0/B" "half_adder_1/xor_0/VDD!" -0.585204
-cap "half_adder_0/xor_0/~B" "half_adder_1/xor_0/VDD!" 2.13883
+cap "Co" "GND!" 10.3889
+cap "A" "li_802_412#" 7.07018
+cap "li_3242_296#" "VDD!" 11.1623
+cap "Ci" "S" 2.93961
+cap "Co" "li_3724_296#" 16.83
+cap "Ci" "VDD!" 1.02725
+cap "li_3242_296#" "GND!" 25.9474
+cap "li_3242_296#" "li_3724_296#" 6.05396
+cap "Ci" "GND!" 2.05801
+cap "Ci" "li_802_412#" 3.85169
+cap "S" "B" 0.0315224
+cap "VDD!" "B" 2.01195
+cap "VDD!" "S" 4.06522
+cap "GND!" "B" 1.04947
+cap "S" "GND!" 4.89244
+cap "li_802_412#" "B" 80.7432
+cap "li_802_412#" "S" 0.367328
+cap "VDD!" "GND!" 109.945
+cap "VDD!" "li_802_412#" 11.6075
+cap "half_adder_1/A" "half_adder_0/A" -6.87256
+cap "half_adder_1/xor_0/GND!" "half_adder_0/B" -5.7423
+cap "half_adder_1/A" "half_adder_0/xor_0/~B" 130.298
 cap "half_adder_1/xor_0/GND!" "half_adder_1/xor_0/VDD!" -42.6068
-cap "half_adder_0/xor_0/~B" "half_adder_1/xor_0/a_210_630#" 0.0137134
-cap "half_adder_1/xor_0/VDD!" "half_adder_0/S" -4.06522
-cap "half_adder_0/xor_0/~B" "half_adder_1/xor_0/~A" 0.213373
+cap "half_adder_0/C" "half_adder_0/A" -0.030303
+cap "half_adder_0/C" "half_adder_1/A" 0.326998
+cap "half_adder_0/C" "half_adder_0/xor_0/~B" 4.24098
+cap "half_adder_0/xor_0/~A" "half_adder_1/A" 389.998
+cap "half_adder_0/xor_0/~A" "half_adder_0/xor_0/~B" -28.6243
+cap "half_adder_1/S" "half_adder_0/B" -0.0114645
+cap "half_adder_1/A" "half_adder_1/B" -0.419619
+cap "half_adder_1/A" "half_adder_0/xor_0/a_90_226#" 30.7681
+cap "half_adder_0/B" "half_adder_0/A" -5.57205
+cap "half_adder_0/B" "half_adder_1/A" 142.564
+cap "half_adder_0/B" "half_adder_0/xor_0/~B" -0.912968
+cap "half_adder_1/xor_0/VDD!" "half_adder_0/A" -2.03972
+cap "half_adder_1/xor_0/VDD!" "half_adder_1/A" 29.3639
+cap "half_adder_1/xor_0/VDD!" "half_adder_0/xor_0/~B" -0.370914
+cap "half_adder_0/C" "half_adder_0/B" -0.66609
+cap "half_adder_0/xor_0/~A" "half_adder_0/xor_0/a_90_226#" -0.447772
+cap "half_adder_0/xor_0/~A" "half_adder_0/B" -74.6116
+cap "half_adder_0/xor_0/~A" "half_adder_1/xor_0/VDD!" -20.5332
+cap "half_adder_1/xor_0/GND!" "half_adder_1/A" -11.1277
+cap "half_adder_1/xor_0/GND!" "half_adder_0/A" -2.06298
 cap "half_adder_0/B" "half_adder_1/xor_0/~A" 0.0113902
-cap "half_adder_0/B" "half_adder_0/A" -11.1441
-cap "half_adder_0/A" "half_adder_0/S" -0.238981
-cap "half_adder_0/A" "half_adder_1/xor_0/GND!" -2.06298
-cap "half_adder_0/B" "half_adder_1/S" -0.0343934
-cap "half_adder_0/B" "half_adder_1/xor_0/GND!" -2.0441
-cap "half_adder_0/B" "half_adder_0/S" -2.93961
-cap "half_adder_1/xor_0/GND!" "half_adder_0/S" -4.89244
-cap "half_adder_1/S" "half_adder_0/B" -0.020058
-cap "half_adder_1/xor_0/a_90_226#" "half_adder_0/xor_0/~A" 0.240327
-cap "half_adder_0/S" "half_adder_1/xor_0/~B" 0.0281795
-cap "half_adder_0/xor_0/~B" "half_adder_1/xor_0/~B" 1.66107
-cap "half_adder_0/xor_0/~B" "half_adder_1/xor_0/~A" 0.54701
-cap "half_adder_1/xor_0/a_300_226#" "half_adder_0/xor_0/~A" 0.012929
-cap "half_adder_1/xor_0/~A" "half_adder_1/xor_0/GND!" 0.423492
-cap "half_adder_1/xor_0/~B" "half_adder_1/A" 0.436236
-cap "half_adder_1/xor_0/~B" "half_adder_0/xor_0/~A" 0.437654
-cap "half_adder_1/xor_0/~A" "half_adder_1/A" 28.2926
-cap "half_adder_1/xor_0/~A" "half_adder_0/xor_0/~A" 10.7702
-cap "half_adder_1/xor_0/~B" "half_adder_0/xor_0/a_390_630#" 0.0323948
-cap "half_adder_0/B" "half_adder_1/A" 7.46942
-cap "half_adder_1/S" "half_adder_1/xor_0/VDD!" -4.06522
-cap "half_adder_0/B" "half_adder_1/xor_0/~B" 0.095417
-cap "half_adder_1/S" "half_adder_1/B" -2.93961
-cap "half_adder_1/B" "half_adder_1/xor_0/VDD!" -2.01195
-cap "half_adder_1/S" "half_adder_1/xor_0/GND!" -4.89244
+cap "half_adder_0/B" "half_adder_0/xor_0/a_90_226#" -2.59492
+cap "half_adder_1/xor_0/VDD!" "half_adder_0/B" -10.6694
+cap "half_adder_1/xor_0/GND!" "half_adder_0/xor_0/~A" -4.27811
+cap "half_adder_0/B" "nor_0/A" 0.970533
+cap "half_adder_1/xor_0/a_390_630#" "nor_0/A" 2.71513
+cap "half_adder_1/B" "half_adder_1/xor_0/~B" -2.62803
 cap "half_adder_0/xor_0/a_90_226#" "half_adder_1/A" 0.00811183
-cap "half_adder_1/xor_0/GND!" "half_adder_1/xor_0/VDD!" -46.1809
-cap "half_adder_0/xor_0/~B" "half_adder_1/xor_0/VDD!" 12.3175
-cap "half_adder_1/S" "half_adder_1/C" -1.18521
-cap "half_adder_1/A" "half_adder_1/xor_0/VDD!" 84.0528
-cap "half_adder_0/xor_0/~A" "half_adder_1/xor_0/VDD!" 0.126815
-cap "half_adder_1/B" "half_adder_1/xor_0/GND!" -2.05801
-cap "half_adder_0/nor_0/a_210_630#" "half_adder_1/xor_0/~B" 0.306028
-cap "half_adder_1/C" "half_adder_1/B" -0.978056
-cap "half_adder_0/xor_0/~B" "half_adder_1/xor_0/GND!" 0.190747
-cap "half_adder_0/S" "half_adder_1/A" 0.00164991
-cap "half_adder_0/xor_0/~B" "half_adder_1/A" 34.9268
-cap "half_adder_1/A" "half_adder_1/xor_0/GND!" -13.5443
-cap "half_adder_0/xor_0/~A" "half_adder_1/xor_0/GND!" 1.90275
-cap "half_adder_1/A" "half_adder_0/xor_0/~A" 11.3168
-cap "half_adder_1/xor_0/~B" "half_adder_1/xor_0/VDD!" 3.52007
-cap "half_adder_1/C" "half_adder_1/A" -0.588462
-cap "half_adder_1/xor_0/~A" "half_adder_1/xor_0/VDD!" 5.14549
-cap "half_adder_1/xor_0/GND!" "half_adder_1/C" -7.38158
-cap "half_adder_1/B" "half_adder_1/C" -0.570395
-cap "half_adder_1/A" "half_adder_1/C" -0.588462
-cap "half_adder_1/S" "half_adder_1/C" -1.18521
-cap "half_adder_1/xor_0/GND!" "half_adder_1/xor_0/VDD!" -16.4661
-cap "half_adder_1/xor_0/VDD!" "half_adder_1/C" -6.42366
-merge "half_adder_0/S" "S0" -46.4766 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4356 -264 0 0 0 0 0 0 0 0 0 0 0 0
-merge "half_adder_1/B" "Ci" -125.128 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15312 -596 0 0 0 0 0 0 0 0 0 0
-merge "half_adder_1/S" "S1" -43.2493 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4356 -264 0 0 0 0 0 0 0 0 0 0 0 0
-merge "half_adder_1/C" "Co" -163.013 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -22044 -800 0 0 0 0 0 0 0 0 0 0 0 0
-merge "half_adder_0/nor_0/VDD!" "half_adder_0/xor_0/VDD!" -2305.83 0 0 0 0 -324096 -8108 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -323328 -7120 0 0 0 0 0 0 0 0 0 0 0 0
+cap "nor_0/Y" "half_adder_1/B" 0.185838
+cap "half_adder_0/xor_0/~A" "half_adder_1/A" 20.5728
+cap "half_adder_0/A" "nor_0/A" 0.0926201
+cap "half_adder_1/xor_0/a_390_630#" "half_adder_1/xor_0/~B" -0.938633
+cap "half_adder_1/xor_0/a_210_630#" "nor_0/A" 3.14601
+cap "nor_0/GND!" "nor_0/A" -5.47327
+cap "half_adder_1/B" "half_adder_1/A" -3.43207
+cap "half_adder_1/xor_0/a_300_226#" "half_adder_0/xor_0/~A" 0.012929
+cap "half_adder_0/xor_0/a_390_630#" "nor_0/A" 0.238142
+cap "half_adder_0/xor_0/~B" "nor_0/A" 12.4898
+cap "nor_0/VDD!" "nor_0/A" 304.658
+cap "half_adder_1/B" "nor_0/B" 0.161668
+cap "half_adder_0/B" "half_adder_1/A" 2.48361
+cap "half_adder_1/xor_0/a_210_630#" "half_adder_1/xor_0/~B" -0.804542
+cap "nor_0/VDD!" "half_adder_1/xor_0/~B" -48.8391
+cap "half_adder_1/xor_0/~A" "nor_0/A" 77.4513
+cap "nor_0/GND!" "half_adder_1/B" -2.02803
+cap "nor_0/GND!" "half_adder_1/A" 1.93358
+cap "nor_0/GND!" "half_adder_0/xor_0/~A" 1.90275
+cap "half_adder_0/xor_0/~B" "half_adder_1/A" 67.0808
+cap "half_adder_0/xor_0/~B" "half_adder_0/xor_0/~A" -0.289351
+cap "nor_0/VDD!" "half_adder_1/A" 21.0842
+cap "nor_0/VDD!" "half_adder_0/xor_0/~A" -0.317478
+cap "half_adder_1/xor_0/~A" "half_adder_1/xor_0/~B" -1.35933
+cap "nor_0/VDD!" "half_adder_1/B" 0.118361
+cap "half_adder_0/nor_0/a_210_630#" "nor_0/A" 2.95304
+cap "half_adder_1/xor_0/~A" "half_adder_1/A" 1.30656
+cap "half_adder_0/xor_0/~A" "half_adder_1/xor_0/~A" 10.7702
+cap "half_adder_1/S" "nor_0/A" 27.5421
+cap "inv_0/Y" "half_adder_1/S" -0.503061
+cap "half_adder_1/S" "half_adder_1/xor_0/~B" -4.92037
+cap "nor_0/GND!" "half_adder_0/xor_0/~B" 0.190747
+cap "nor_0/GND!" "nor_0/VDD!" -40.9766
+cap "half_adder_1/xor_0/a_90_226#" "nor_0/A" 0.398552
+cap "half_adder_0/xor_0/~B" "nor_0/VDD!" 12.3175
+cap "half_adder_0/nor_0/a_210_630#" "half_adder_1/A" 2.12952
+cap "half_adder_1/S" "half_adder_1/A" -0.367328
+cap "half_adder_1/xor_0/a_210_630#" "half_adder_1/xor_0/~A" -0.0439919
+cap "half_adder_0/xor_0/a_210_630#" "nor_0/A" 0.116729
+cap "nor_0/GND!" "half_adder_1/xor_0/~A" 0.423492
+cap "half_adder_1/B" "half_adder_1/S" -2.93961
+cap "half_adder_0/xor_0/~B" "half_adder_1/xor_0/~A" 0.54701
+cap "half_adder_0/B" "half_adder_1/S" -0.020058
+cap "nor_0/VDD!" "half_adder_1/xor_0/~A" 4.73615
+cap "half_adder_0/xor_0/~A" "half_adder_1/xor_0/a_90_226#" 0.240327
+cap "nor_0/GND!" "half_adder_1/S" -4.89244
+cap "half_adder_1/nor_0/a_210_630#" "nor_0/A" 0.0316739
+cap "half_adder_1/xor_0/~B" "nor_0/A" 302
+cap "nor_0/VDD!" "half_adder_1/S" -4.06522
+cap "half_adder_0/xor_0/~A" "nor_0/A" 4.87432
+cap "half_adder_1/B" "nor_0/A" -6.88665
+cap "half_adder_1/A" "nor_0/A" 215.911
+cap "half_adder_0/xor_0/~A" "half_adder_1/xor_0/~B" 0.117242
+cap "nor_0/B" "nor_0/A" 0.0228467
+cap "inv_0/Y" "half_adder_1/B" 0.00595982
+cap "half_adder_1/xor_0/~B" "half_adder_1/A" 2.84217e-14
+cap "nor_0/VDD!" "inv_0/Y" -1.27818
+cap "nor_0/VDD!" "nor_0/A" 204.333
+cap "nor_0/GND!" "nor_0/Y" -4.22573
+cap "inv_0/Y" "nor_0/Y" 11.1492
+cap "nor_0/B" "nor_0/Y" 11.2036
+cap "nor_0/Y" "nor_0/A" 47.0611
+cap "nor_0/VDD!" "half_adder_1/xor_0/~B" 5.3945
+cap "half_adder_1/A" "nor_0/A" 0.0473181
+cap "half_adder_1/nor_0/a_210_630#" "nor_0/A" 6.6925
+cap "half_adder_1/xor_0/a_210_630#" "nor_0/A" 0.0522811
+cap "half_adder_1/xor_0/~B" "nor_0/Y" 0.263934
+cap "inv_0/Y" "half_adder_1/B" -0.0789066
+cap "half_adder_1/xor_0/a_390_630#" "nor_0/A" 0.149703
+cap "nor_0/VDD!" "nor_0/Y" 79.3757
+cap "half_adder_1/B" "nor_0/A" 1.76171
+cap "inv_0/Y" "half_adder_1/xor_0/~A" 0.314281
+cap "nor_0/GND!" "half_adder_1/xor_0/~A" 2.25836
+cap "nor_0/B" "half_adder_1/xor_0/~A" 3.47191
+cap "half_adder_1/B" "half_adder_1/xor_0/~B" -0.0906218
+cap "half_adder_1/xor_0/~A" "nor_0/A" 30.1435
+cap "inv_0/Y" "nor_0/GND!" -10.3889
+cap "nor_0/B" "nor_0/GND!" -7.13362
+cap "nor_0/GND!" "nor_0/A" -1.52182
+cap "nor_0/B" "nor_0/A" 123.16
+cap "inv_0/Y" "nor_0/A" -1.78527
+cap "nor_0/GND!" "half_adder_1/xor_0/~B" 0.190747
+cap "nor_0/B" "half_adder_1/xor_0/~B" 31.1793
+cap "nor_0/a_210_630#" "nor_0/A" 5.24625
+cap "nor_0/VDD!" "half_adder_1/xor_0/~A" -2.62399
+cap "half_adder_1/xor_0/~B" "nor_0/A" 96.0281
+cap "inv_0/Y" "half_adder_1/S" -0.503061
+cap "half_adder_1/xor_0/~A" "nor_0/Y" 2.18692
+cap "half_adder_1/S" "nor_0/A" 0.0636944
+cap "nor_0/VDD!" "nor_0/GND!" -51.1868
+cap "nor_0/VDD!" "nor_0/B" 81.1053
+merge "half_adder_1/B" "Ci" -113.085 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15312 -596 0 0 0 0 0 0 0 0 0 0
+merge "half_adder_0/nor_0/VDD!" "inv_0/VDD!" -2954.43 0 0 0 0 -397056 -11956 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -394752 -8992 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_0/VDD!" "nor_0/VDD!"
+merge "nor_0/VDD!" "half_adder_0/xor_0/VDD!"
 merge "half_adder_0/xor_0/VDD!" "half_adder_1/xor_0/VDD!"
 merge "half_adder_1/xor_0/VDD!" "VDD!"
 merge "VDD!" "w_4_864#"
-merge "half_adder_0/nor_0/GND!" "half_adder_0/a_n322_20#" -1607.73 0 0 0 0 0 0 0 0 0 0 -188608 -6960 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -323328 -7120 0 0 0 0 0 0 0 0 0 0 0 0
+merge "half_adder_1/C" "nor_0/B" -215.438 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4884 -412 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nor_0/B" "li_3242_296#"
+merge "half_adder_0/nor_0/GND!" "inv_0/GND!" -2085.47 0 0 0 0 0 0 0 0 0 0 -230272 -8672 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -394752 -8992 0 0 0 0 0 0 0 0 0 0 0 0
+merge "inv_0/GND!" "nor_0/GND!"
+merge "nor_0/GND!" "half_adder_0/a_n322_20#"
 merge "half_adder_0/a_n322_20#" "half_adder_0/xor_0/GND!"
 merge "half_adder_0/xor_0/GND!" "half_adder_1/a_n322_20#"
 merge "half_adder_1/a_n322_20#" "half_adder_1/xor_0/GND!"
 merge "half_adder_1/xor_0/GND!" "GND!"
 merge "GND!" "a_4_20#"
-merge "half_adder_0/C" "half_adder_1/A" -281.846 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -8712 -528 0 0 0 0 0 0 0 0 0 0 0 0
-merge "half_adder_1/A" "li_1550_296#"
-merge "half_adder_0/A" "A" -116.148 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15444 -600 0 0 0 0 0 0 0 0 0 0
-merge "half_adder_0/B" "B" -131.327 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15312 -596 0 0 0 0 0 0 0 0 0 0
+merge "inv_0/A" "nor_0/Y" -213.837 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3168 -360 0 0 0 0 0 0 0 0 0 0 0 0
+merge "nor_0/Y" "li_3724_296#"
+merge "inv_0/Y" "Co" -220.784 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -26400 -932 0 0 0 0 0 0 0 0 0 0 0 0
+merge "half_adder_1/S" "S" -44.8176 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4356 -264 0 0 0 0 0 0 0 0 0 0 0 0
+merge "half_adder_0/S" "half_adder_1/A" -545.424 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -4356 -264 -1188 -168 0 0 0 0 0 0 0 0 0 0
+merge "half_adder_1/A" "li_802_412#"
+merge "nor_0/A" "half_adder_0/C" -850.228 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2312 -272 0 0 0 0 0 0 0 0 0 0 0 0
+merge "half_adder_0/C" "li_1566_544#"
+merge "half_adder_0/A" "A" -114.984 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15444 -600 0 0 0 0 0 0 0 0 0 0
+merge "half_adder_0/B" "B" -103.535 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -15312 -596 0 0 0 0 0 0 0 0 0 0

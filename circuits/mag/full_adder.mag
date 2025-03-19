@@ -1,42 +1,78 @@
 magic
 tech sky130A
-timestamp 1742393477
+magscale 1 2
+timestamp 1742396458
 << nwell >>
-rect 2 432 1690 480
+rect 4 864 4140 960
 << psubdiff >>
-rect 2 10 1690 38
+rect 4 20 4140 76
 << locali >>
-rect 2 432 1690 480
-rect 401 206 434 239
-rect 1247 206 1280 239
-rect 775 148 920 181
-rect 1621 148 1654 315
-rect 2 0 1690 48
+rect 4 864 4140 960
+rect 802 462 868 478
+rect 802 428 818 462
+rect 852 428 868 462
+rect 802 412 868 428
+rect 2494 412 2560 478
+rect 3242 296 3474 362
+rect 3724 296 3930 362
+rect 4002 230 4068 630
+rect 4 0 4140 96
+<< viali >>
+rect 1566 544 1600 578
+rect 818 428 852 462
+rect 3590 470 3624 504
 << metal1 >>
-rect 41 181 74 298
-rect 507 181 540 297
-rect 1353 181 1386 297
+rect 1659 844 3415 845
+rect 1659 779 3416 844
+rect 1659 596 1725 779
+rect 82 362 148 596
+rect 802 462 934 478
+rect 802 428 818 462
+rect 852 428 934 462
+rect 802 412 934 428
+rect 868 258 934 412
+rect 1014 362 1080 594
+rect 1550 578 1725 596
+rect 1550 544 1566 578
+rect 1600 544 1725 578
+rect 1550 530 1725 544
+rect 1222 390 1792 456
+rect 1222 258 1288 390
+rect 2706 362 2772 594
+rect 3348 520 3416 779
+rect 3348 504 3640 520
+rect 3348 470 3590 504
+rect 3624 470 3640 504
+rect 3348 456 3640 470
+rect 3348 454 3639 456
+rect 868 194 1288 258
 use half_adder  half_adder_0
 timestamp 1742357947
-transform 1 0 163 0 1 0
-box -163 0 683 488
+transform 1 0 326 0 1 0
+box -326 0 1366 976
 use half_adder  half_adder_1
 timestamp 1742357947
-transform 1 0 1009 0 1 0
-box -163 0 683 488
+transform 1 0 2018 0 1 0
+box -326 0 1366 976
+use inv  inv_0 ~/magic/library/mag
+timestamp 1738780557
+transform 1 0 3822 0 1 0
+box -4 0 322 976
+use nor  nor_0 ~/magic/library/mag
+timestamp 1741797781
+transform 1 0 3388 0 1 0
+box -4 0 430 976
 << labels >>
-flabel metal1 41 181 74 298 0 FreeSerif 80 0 0 0 A
+flabel metal1 82 362 148 596 0 FreeSerif 160 0 0 0 A
 port 2 nsew
-flabel metal1 507 181 540 297 0 FreeSerif 80 0 0 0 B
+flabel metal1 1014 362 1080 594 0 FreeSerif 160 0 0 0 B
 port 3 nsew
-flabel locali 401 206 434 239 0 FreeSerif 80 0 0 0 S0
-port 5 nsew
-flabel locali 1247 206 1280 239 0 FreeSerif 80 0 0 0 S1
-port 6 nsew
-flabel metal1 1353 181 1386 297 0 FreeSerif 80 0 0 0 Ci
+flabel locali 4 864 4140 960 0 FreeSerif 160 0 0 0 VDD!
+flabel locali 4 0 4140 96 0 FreeSerif 160 0 0 0 GND!
+flabel metal1 2706 362 2772 594 0 FreeSerif 160 0 0 0 Ci
 port 4 nsew
-flabel locali 1621 148 1654 315 0 FreeSerif 80 0 0 0 Co
-port 7 nsew
-flabel locali 2 0 1690 48 0 FreeSerif 80 0 0 0 GND!
-flabel locali 2 432 1690 480 0 FreeSerif 80 0 0 0 VDD!
+flabel locali 2494 412 2560 478 0 FreeSerif 160 0 0 0 S
+port 5 nsew
+flabel locali 4002 230 4068 630 5 FreeSerif 160 0 0 0 Co
+port 6 s
 << end >>

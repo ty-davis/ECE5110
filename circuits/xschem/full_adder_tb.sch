@@ -22,21 +22,15 @@ N 270 60 270 110 {
 lab=GND}
 N 270 -100 270 -80 {lab=Ci}
 N 730 -130 730 -30 {
-lab=S0}
+lab=S}
 N 730 30 730 60 {
 lab=GND}
-N 730 -140 730 -130 {lab=S0}
+N 730 -140 730 -130 {lab=S}
 N 190 -140 300 -140 {lab=A}
 N 220 -120 300 -120 {lab=B}
 N 460 -100 550 -100 {lab=Co}
 N 550 -100 550 -10 {lab=Co}
-N 460 -140 730 -140 {lab=S0}
-N 670 -110 670 -10 {
-lab=S1}
-N 670 50 670 80 {
-lab=GND}
-N 670 -120 670 -110 {lab=S1}
-N 460 -120 670 -120 {lab=S1}
+N 460 -140 730 -140 {lab=S}
 N 180 -100 180 -20 {
 lab=B}
 N 180 40 180 90 {
@@ -59,7 +53,7 @@ C {devices/code.sym} 60 -360 0 0 {name=s1 only_toplevel=false value="
 .control
 save all
 tran 1n 4u
-plot V(A) V(B)+2 V(Ci)+4 V(S0)+6 V(S1)+8 V(Co)+10
+plot V(A) V(B)+2 V(Ci)+4 V(S)+6 V(Co)+8
 .endc
 "}
 C {devices/code.sym} 480 -320 0 0 {name=TT_MODELS
@@ -83,15 +77,8 @@ value=1p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 730 60 0 0 {name=l6 lab=GND}
-C {devices/lab_pin.sym} 730 -130 0 0 {name=p4 sig_type=std_logic lab=S0}
+C {devices/lab_pin.sym} 730 -130 0 0 {name=p4 sig_type=std_logic lab=S}
 C {full_adder.sym} 380 -120 0 0 {name=x1}
-C {devices/capa.sym} 670 20 0 0 {name=C3
-m=1
-value=1p
-footprint=1206
-device="ceramic capacitor"}
-C {devices/gnd.sym} 670 80 0 0 {name=l7 lab=GND}
-C {devices/lab_pin.sym} 670 -110 0 0 {name=p5 sig_type=std_logic lab=S1}
 C {devices/sqwsource.sym} 180 10 0 0 {name=V4 vhi=1.8 freq=0.5e6}
 C {devices/gnd.sym} 180 90 0 0 {name=l8 lab=GND}
 C {devices/lab_wire.sym} 180 -100 0 0 {name=p6 sig_type=std_logic lab=B}

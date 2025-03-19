@@ -30,8 +30,10 @@ Xnor_0 VDD GND nor_0/A C nor_0/B nor
 Xinv_1 VDD GND A nor_0/B inv
 .ends
 
-*.subckt full_adder A B Ci S0 S1 Co
-Xhalf_adder_0 A B S0 half_adder_1/A VDD GND half_adder
-Xhalf_adder_1 half_adder_1/A Ci S1 Co VDD GND half_adder
+*.subckt full_adder A B Ci S Co
+Xhalf_adder_0 A B half_adder_1/A nor_0/A VDD GND half_adder
+Xhalf_adder_1 half_adder_1/A Ci S nor_0/B VDD GND half_adder
+Xinv_0 VDD GND nor_0/Y Co inv
+Xnor_0 VDD GND nor_0/A nor_0/Y nor_0/B nor
 *.ends
 
