@@ -1,0 +1,32 @@
+* NGSPICE file created from half_adder.ext - technology: sky130A
+
+.subckt xor VDD GND Y A ~B ~A B
+X0 Y ~A a_300_226# GND sky130_fd_pr__nfet_01v8 ad=0.095 pd=0.88 as=0.0525 ps=0.71 w=0.5 l=0.15
+X1 GND A a_90_226# GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.18 ps=1.72 w=0.5 l=0.15
+X2 VDD B a_390_630# VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.105 ps=1.21 w=1 l=0.15
+X3 a_300_226# ~B GND GND sky130_fd_pr__nfet_01v8 ad=0.0525 pd=0.71 as=0.0975 ps=0.89 w=0.5 l=0.15
+X4 Y ~B a_210_630# VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.105 ps=1.21 w=1 l=0.15
+X5 a_390_630# ~A Y VDD sky130_fd_pr__pfet_01v8 ad=0.105 pd=1.21 as=0.195 ps=1.39 w=1 l=0.15
+X6 a_210_630# A VDD VDD sky130_fd_pr__pfet_01v8 ad=0.105 pd=1.21 as=0.36 ps=2.72 w=1 l=0.15
+X7 a_90_226# B Y GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.095 ps=0.88 w=0.5 l=0.15
+.ends
+
+.subckt inv VDD GND A Y
+X0 Y A GND GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.18 ps=1.72 w=0.5 l=0.15
+X1 Y A VDD VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.36 ps=2.72 w=1 l=0.15
+.ends
+
+.subckt nor VDD GND A Y B
+X0 Y B GND GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.18 ps=1.72 w=0.5 l=0.15
+X1 GND A Y GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.0975 ps=0.89 w=0.5 l=0.15
+X2 Y A a_210_630# VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.105 ps=1.21 w=1 l=0.15
+X3 a_210_630# B VDD VDD sky130_fd_pr__pfet_01v8 ad=0.105 pd=1.21 as=0.36 ps=2.72 w=1 l=0.15
+.ends
+
+*.subckt half_adder A B S C
+Xxor_0 VDD GND S A nor_0/A nor_0/B B xor
+Xinv_0 VDD GND B nor_0/A inv
+Xnor_0 VDD GND nor_0/A C nor_0/B nor
+Xinv_1 VDD GND A nor_0/B inv
+*.ends
+

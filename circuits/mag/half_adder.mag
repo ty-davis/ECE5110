@@ -1,4 +1,91 @@
 magic
 tech sky130A
-timestamp 0
+timestamp 1742357947
+<< nwell >>
+rect -161 432 681 480
+rect 238 206 271 239
+<< psubdiff >>
+rect -161 10 681 38
+<< locali >>
+rect -161 432 681 480
+rect 238 206 271 239
+rect 395 227 594 260
+rect 612 148 645 315
+rect -161 0 681 48
+<< viali >>
+rect 403 345 420 362
+rect 51 273 68 290
+rect 246 272 263 289
+rect 105 227 122 244
+rect 159 227 176 244
+rect -114 156 -97 173
+rect -63 155 -46 172
+rect 352 156 369 173
+rect 515 156 532 173
+<< metal1 >>
+rect 97 362 428 369
+rect 97 345 403 362
+rect 420 345 428 362
+rect 97 337 428 345
+rect -122 290 76 298
+rect -122 273 51 290
+rect 68 273 76 290
+rect -122 265 76 273
+rect -122 173 -89 265
+rect 97 244 130 337
+rect 238 289 377 297
+rect 238 272 246 289
+rect 263 272 377 289
+rect 238 264 377 272
+rect 97 227 105 244
+rect 122 227 130 244
+rect 97 219 130 227
+rect 151 244 183 252
+rect 151 227 159 244
+rect 176 227 183 244
+rect 151 181 183 227
+rect -122 156 -114 173
+rect -97 156 -89 173
+rect -122 148 -89 156
+rect -71 172 184 181
+rect -71 155 -63 172
+rect -46 155 184 172
+rect -71 148 184 155
+rect 344 173 377 264
+rect 344 156 352 173
+rect 369 156 377 173
+rect 344 148 377 156
+rect 507 173 540 181
+rect 507 156 515 173
+rect 532 156 540 173
+rect 151 74 184 148
+rect 507 74 540 156
+rect 151 41 540 74
+use inv  inv_0 ~/magic/library/mag
+timestamp 1738780557
+transform 1 0 305 0 1 0
+box -2 0 161 488
+use inv  inv_1
+timestamp 1738780557
+transform 1 0 -161 0 1 0
+box -2 0 161 488
+use nor  nor_0 ~/magic/library/mag
+timestamp 1741797781
+transform 1 0 468 0 1 0
+box -2 0 215 488
+use xor  xor_0 ~/magic/library/mag
+timestamp 1741801383
+transform 1 0 -11 0 1 0
+box 11 0 314 488
+<< labels >>
+flabel metal1 -122 148 -89 298 0 FreeSerif 80 0 0 0 A
+port 0 nsew
+flabel metal1 344 181 377 297 0 FreeSerif 80 0 0 0 B
+port 1 nsew
+flabel locali 238 206 271 239 0 FreeSerif 80 0 0 0 S
+port 2 nsew
+flabel locali 612 148 645 315 0 FreeSerif 80 0 0 0 C
+port 3 nsew
+flabel locali -161 432 681 480 0 FreeSerif 80 0 0 0 VDD!
+flabel locali -161 0 681 48 0 FreeSerif 80 0 0 0 GND!
 << end >>

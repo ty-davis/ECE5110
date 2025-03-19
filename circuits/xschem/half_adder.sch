@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -43,19 +42,15 @@ N 60 -130 60 -50 {
 lab=#net2}
 N 60 -130 90 -130 {
 lab=#net2}
-N 50 -190 50 -20 {
-lab=#net1}
-N 50 -20 100 -20 {
-lab=#net1}
-N 20 -50 20 20 {
-lab=#net2}
-N 20 20 100 20 {
-lab=#net2}
-C {/home/tydavis/magic/library/xschem/xor.sym} 70 -90 0 0 {name=x1}
-C {/home/tydavis/magic/library/xschem/nor.sym} 80 60 0 0 {name=x2}
-C {/home/tydavis/magic/library/xschem/lab1/inv.sym} -110 -140 0 0 {name=x3}
-C {/home/tydavis/magic/library/xschem/lab1/inv.sym} -110 0 0 0 {name=x4}
+N 40 -190 40 20 {lab=#net1}
+N 40 20 100 20 {lab=#net1}
+N 60 -50 60 -20 {lab=#net2}
+N 60 -20 100 -20 {lab=#net2}
 C {devices/ipin.sym} -260 -210 0 0 {name=p1 lab=A}
 C {devices/ipin.sym} -270 -160 0 0 {name=p2 lab=B}
 C {devices/opin.sym} 340 -170 0 0 {name=p3 lab=S}
 C {devices/opin.sym} 360 0 0 0 {name=p4 lab=C}
+C {xor.sym} 70 -90 0 0 {name=x1}
+C {nor.sym} 80 60 0 0 {name=x2}
+C {lab1/inv.sym} -110 0 0 0 {name=x4}
+C {lab1/inv.sym} -110 -140 0 0 {name=x3}
