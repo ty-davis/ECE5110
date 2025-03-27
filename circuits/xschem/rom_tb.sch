@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -213,4 +212,4 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 680 180 0 0 {name=l12 lab=GND}
 C {devices/lab_pin.sym} 680 -10 0 0 {name=p10 sig_type=std_logic lab=Y1}
-C {rom_sine_256.sym} 470 -110 0 0 {name=x1}
+C {rom.sym} 470 -110 0 0 {name=x1}
