@@ -93,7 +93,7 @@ def write_partial(partial_name, fout):
 
 def main():
     print_memory()
-    period = 2 ** 6
+    period = 2 ** 7
     x = np.arange(period)
     df = pd.DataFrame({
         'x': x,
