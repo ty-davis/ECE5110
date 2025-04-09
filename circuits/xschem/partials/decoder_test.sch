@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -30,13 +29,13 @@ lab=VDD}
 N 150 110 180 110 {
 lab=#net2}
 N 270 110 330 110 {
-lab=#net3}
+lab=word1}
 N 240 110 270 110 {
-lab=#net3}
+lab=word1}
 N 330 110 380 110 {
-lab=#net3}
+lab=word1}
 N 380 110 420 110 {
-lab=#net3}
+lab=word1}
 N -0 40 -0 60 {
 lab=VDD}
 N 180 40 240 40 {
@@ -70,7 +69,7 @@ lab=word0}
 N 470 -20 480 -20 {
 lab=GND}
 N 70 0 70 70 {
-lab=N_A1}
+lab=#net3}
 N 160 -0 160 70 {
 lab=A1}
 N 250 -0 250 70 {
@@ -82,13 +81,13 @@ lab=A1}
 N 210 70 250 70 {
 lab=N_A0}
 N 420 110 470 110 {
-lab=#net3}
+lab=word1}
 N 470 110 510 110 {
-lab=#net3}
+lab=word1}
 N 510 110 560 110 {
-lab=#net3}
+lab=word1}
 N 560 110 600 110 {
-lab=#net3}
+lab=word1}
 N 560 50 570 50 {
 lab=GND}
 N 570 50 570 80 {
@@ -96,17 +95,15 @@ lab=GND}
 N 560 80 570 80 {
 lab=GND}
 N 600 110 650 110 {
-lab=#net3}
+lab=word1}
 N 650 110 690 110 {
-lab=#net3}
+lab=word1}
 N 660 50 660 80 {
 lab=GND}
 N 650 80 660 80 {
 lab=GND}
 N 690 110 740 110 {
-lab=#net3}
-N 740 110 780 110 {
-lab=#net3}
+lab=word1}
 N 650 50 660 50 {
 lab=GND}
 N 0 60 0 110 {
@@ -166,27 +163,30 @@ lab=N_A0}
 N 160 70 160 120 {
 lab=A1}
 N 70 70 70 120 {
-lab=N_A1}
-N 340 -70 340 -20 {
-lab=A0}
+lab=#net3}
 N 340 -20 340 -0 {
 lab=A0}
-N 250 -70 250 -20 {
-lab=N_A0}
 N 250 -20 250 -0 {
 lab=N_A0}
-N 160 -70 160 -20 {
-lab=A1}
 N 160 -20 160 -0 {
 lab=A1}
-N 70 -70 70 -20 {
-lab=N_A1}
 N 70 -20 70 -0 {
-lab=N_A1}
+lab=#net3}
 N 0 -30 0 -20 {
 lab=VDD}
 N 0 -20 0 -0 {
 lab=VDD}
+N 740 110 790 110 {lab=word1}
+N 60 -50 60 -30 {lab=#net3}
+N 60 -30 70 -30 {lab=#net3}
+N 70 -30 70 -20 {lab=#net3}
+N 160 -70 160 -50 {lab=A1}
+N 160 -50 160 -20 {lab=A1}
+N 340 -70 340 -50 {lab=A0}
+N 340 -50 340 -20 {lab=A0}
+N 240 -50 240 -40 {lab=N_A0}
+N 240 -40 250 -40 {lab=N_A0}
+N 250 -40 250 -20 {lab=N_A0}
 C {sky130_fd_pr/nfet_01v8.sym} 450 10 0 0 {name=M1
 L=0.15
 W=1
@@ -201,9 +201,7 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
-C {devices/ipin.sym} 70 -70 3 1 {name=p1 lab=N_A1}
 C {devices/ipin.sym} 160 -70 3 1 {name=p2 lab=A1}
-C {devices/ipin.sym} 250 -70 3 1 {name=p3 lab=N_A0}
 C {devices/ipin.sym} 340 -70 3 1 {name=p4 lab=A0}
 C {sky130_fd_pr/pfet_01v8.sym} 120 20 3 1 {name=M3
 L=0.15
@@ -318,3 +316,7 @@ C {devices/vdd.sym} 120 50 3 0 {name=l10 lab=VDD}
 C {devices/vdd.sym} 120 120 3 0 {name=l11 lab=VDD}
 C {devices/vdd.sym} 210 120 3 0 {name=l12 lab=VDD}
 C {devices/vdd.sym} 300 50 3 0 {name=l13 lab=VDD}
+C {lab1/inv.sym} 160 -100 2 0 {name=x1}
+C {lab1/inv.sym} 340 -100 2 0 {name=x2}
+C {devices/lab_wire.sym} 250 -10 0 0 {name=p1 sig_type=std_logic lab=N_A0}
+C {devices/lab_wire.sym} 70 -20 0 0 {name=p3 sig_type=std_logic lab=N_A1}
