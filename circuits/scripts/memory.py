@@ -93,7 +93,10 @@ def write_partial(partial_name, fout):
 
 def main():
     print_memory()
-    period = 2 ** 7
+    with open('num_bits_per_channel.txt', 'r') as fin:
+        num_bits_per_channel = int(fin.read().strip())
+    print(num_bits_per_channel)
+    period = 2 ** num_bits_per_channel
     x = np.arange(period)
     df = pd.DataFrame({
         'x': x,
@@ -116,7 +119,7 @@ def main():
         '10': 'ramp',
         '11': 'sine',
     }
-    with open('out.sch', 'w') as fout:
+    with open('memory_out.sch', 'w') as fout:
         write_partial('../xschem/partials/pull_up_and_labels.sch', fout)
         word_num = 0
         m_num = 9

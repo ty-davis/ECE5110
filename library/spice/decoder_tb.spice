@@ -13,7 +13,7 @@ x1 GND GND GND GND GND GND GND GND Y0 net1 net2 net3 net4 net5 net6 net7 Y8 net8
 + net180 net181 net182 net183 net184 net185 net186 net187 net188 net189 net190 net191 net192 net193 net194 net195 net196 net197 net198
 + net199 net200 net201 net202 net203 net204 net205 net206 net207 net208 net209 net210 net211 net212 net213 net214 net215 net216 net217
 + net218 net219 net220 net221 net222 net223 net224 net225 net226 net227 net228 net229 net230 Y235 net231 net232 net233 net234 net235
-+ net236 net237 net238 net239 net240 net241 net242 net243 net244 net245 net246 net247 net248 net249 net250 decoder
++ net236 net237 net238 net239 net240 net241 net242 net243 net244 net245 net246 net247 net248 net249 Y255 decoder
 **** begin user architecture code
 
 

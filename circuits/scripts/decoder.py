@@ -21,8 +21,8 @@ def nmos_header(x, n, p_num):
     content = f"""N {x+170} -60 {x+170} 0 {{ }}
 N {x+80} -60 {x+80} 0 {{ }}
 
-C {{devices/lab_wire.sym}} {x+170} -30 0 0 {{name=p{p_num} lab=A{n}}}
-C {{devices/lab_wire.sym}} {x+80} -30 0 0 {{name=p{p_num+1} lab=N_A{n}}}
+C {{devices/lab_wire.sym}} {x+170} -30 0 0 {{name=p{p_num} lab=N_A{n}}}
+C {{devices/lab_wire.sym}} {x+80} -30 0 0 {{name=p{p_num+1} lab=A{n}}}
 """
     return content
 
@@ -47,7 +47,7 @@ N {x+10} {y+0} {x+10} {y+40} {{lab={bit}}}
 N {x+10} {y+40} {x+10} {y+80} {{lab={bit}}}
 N {x+0} {y+70} {x+50} {y+70} {{lab={word_r}}}
 N {x+50} {y+70} {x+90} {y+70} {{lab={word_r}}}
-C {{sky130_fd_pr/nfet_01v8.sym}} {x+30} {y+40} 0 0 {{name=M{dev}
+C {{sky130_fd_pr/nfet_01v8.sym}} {x+30} {y+40} 2 1 {{name=M{dev}
 L=0.15
 W=1
 nf=1 
