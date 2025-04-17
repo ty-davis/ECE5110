@@ -1,0 +1,10 @@
+box size 17 17
+paint pcontact
+move left 8
+move down 8
+box size 33 33
+paint li
+paint p
+move down 63
+move right 8
+

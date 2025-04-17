@@ -1,115 +1,62 @@
 
-Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
-Equate elements:  no current cell.
-Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
-
 Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
 Equate elements:  no current cell.
 Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
 
-Subcircuit summary:
-Circuit 1: xor                             |Circuit 2: xor                             
--------------------------------------------|-------------------------------------------
-sky130_fd_pr__nfet_01v8 (4)                |sky130_fd_pr__nfet_01v8 (4)                
-sky130_fd_pr__pfet_01v8 (4)                |sky130_fd_pr__pfet_01v8 (4)                
-Number of devices: 8                       |Number of devices: 8                       
-Number of nets: 11                         |Number of nets: 11                         
----------------------------------------------------------------------------------------
-Netlists match uniquely.
-
-Subcircuit pins:
-Circuit 1: xor                             |Circuit 2: xor                             
--------------------------------------------|-------------------------------------------
-GND                                        |GND                                        
-VDD                                        |VDD                                        
-~A                                         |~A                                         
-B                                          |B                                          
-A                                          |A                                          
-~B                                         |~B                                         
-Y                                          |Y                                          
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes xor and xor are equivalent.
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
 
 Subcircuit summary:
-Circuit 1: inv                             |Circuit 2: inv                             
+Circuit 1: scripts/layout/memory_last_2.sp |Circuit 2: ../library/spice/memory_last_2. 
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
-sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
-Number of devices: 2                       |Number of devices: 2                       
-Number of nets: 4                          |Number of nets: 4                          
+sky130_fd_pr__pfet_01v8 (8)                |sky130_fd_pr__pfet_01v8 (8)                
+sky130_fd_pr__nfet_01v8 (3)                |sky130_fd_pr__nfet_01v8 (3)                
+Number of devices: 11                      |Number of devices: 11                      
+Number of nets: 12                         |Number of nets: 12                         
 ---------------------------------------------------------------------------------------
-Netlists match uniquely.
-
-Subcircuit pins:
-Circuit 1: inv                             |Circuit 2: inv                             
--------------------------------------------|-------------------------------------------
-Y                                          |Y                                          
-A                                          |A                                          
-GND                                        |GND                                        
-VDD                                        |VDD                                        
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes inv and inv are equivalent.
-
-Subcircuit summary:
-Circuit 1: nor                             |Circuit 2: nor                             
--------------------------------------------|-------------------------------------------
-sky130_fd_pr__nfet_01v8 (2)                |sky130_fd_pr__nfet_01v8 (2)                
-sky130_fd_pr__pfet_01v8 (2)                |sky130_fd_pr__pfet_01v8 (2)                
-Number of devices: 4                       |Number of devices: 4                       
-Number of nets: 6                          |Number of nets: 6                          
----------------------------------------------------------------------------------------
-Netlists match uniquely.
-
-Subcircuit pins:
-Circuit 1: nor                             |Circuit 2: nor                             
--------------------------------------------|-------------------------------------------
-GND                                        |GND                                        
-A                                          |A                                          
-B                                          |B                                          
-Y                                          |Y                                          
-VDD                                        |VDD                                        
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes nor and nor are equivalent.
-
-Subcircuit summary:
-Circuit 1: half_adder                      |Circuit 2: half_adder                      
--------------------------------------------|-------------------------------------------
-xor (1)                                    |xor (1)                                    
-inv (2)                                    |inv (2)                                    
-nor (1)                                    |nor (1)                                    
-Number of devices: 4                       |Number of devices: 4                       
-Number of nets: 8                          |Number of nets: 8                          
----------------------------------------------------------------------------------------
-Netlists match uniquely.
-
-Subcircuit pins:
-Circuit 1: half_adder                      |Circuit 2: half_adder                      
--------------------------------------------|-------------------------------------------
-B                                          |B                                          
-A                                          |A                                          
-S                                          |S                                          
-C                                          |C                                          
-GND                                        |GND                                        
-VDD                                        |VDD                                        
----------------------------------------------------------------------------------------
-Cell pin lists are equivalent.
-Device classes half_adder and half_adder are equivalent.
-
-Subcircuit summary:
-Circuit 1: mag/full_adder.spice            |Circuit 2: ../library/spice/full_adder.spi 
--------------------------------------------|-------------------------------------------
-half_adder (2)                             |half_adder (2)                             
-inv (1)                                    |inv (1)                                    
-nor (1)                                    |nor (1)                                    
-Number of devices: 4                       |Number of devices: 4                       
-Number of nets: 11                         |Number of nets: 11                         
----------------------------------------------------------------------------------------
-Netlists match uniquely.
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Resolving symmetries by net name.
+Netlists match with 2 symmetries with property errors.
+sky130_fd_pr__nfet_01v8:4 vs. sky130_fd_pr__nfet_01v8:M608:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:9 vs. sky130_fd_pr__nfet_01v8:M609:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:7 vs. sky130_fd_pr__nfet_01v8:M610:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:1 vs. sky130_fd_pr__pfet_01v8:M5:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:5 vs. sky130_fd_pr__pfet_01v8:M7:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:10 vs. sky130_fd_pr__pfet_01v8:M8:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:0 vs. sky130_fd_pr__pfet_01v8:M1:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:8 vs. sky130_fd_pr__pfet_01v8:M6:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:2 vs. sky130_fd_pr__pfet_01v8:M2:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:6 vs. sky130_fd_pr__pfet_01v8:M4:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:3 vs. sky130_fd_pr__pfet_01v8:M3:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
 Cells have no pins;  pin matching not needed.
-Device classes mag/full_adder.spice and ../library/spice/full_adder.spice are equivalent.
+Device classes scripts/layout/memory_last_2.spice and ../library/spice/memory_last_2.spice are equivalent.
 
 Final result: Circuits match uniquely.
-.
+Property errors were found.
+
+The following cells had property errors:
+ scripts/layout/memory_last_2.spice

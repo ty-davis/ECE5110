@@ -120,7 +120,7 @@ def main():
         '11': 'sine',
     }
     with open('memory_out.sch', 'w') as fout:
-        write_partial('../xschem/partials/pull_up_and_labels.sch', fout)
+        write_partial('../../xschem/partials/pull_up_and_labels.sch', fout)
         word_num = 0
         m_num = 9
         p_num = 23

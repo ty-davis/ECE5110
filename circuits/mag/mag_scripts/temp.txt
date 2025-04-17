@@ -1,0 +1,10 @@
+box size 33 140
+paint m1
+move up 107
+box size 33 33
+paint li
+paint m1
+box size 17 17
+move up 8
+move right 8
+paint viali

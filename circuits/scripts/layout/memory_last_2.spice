@@ -1,0 +1,16 @@
+* NGSPICE file created from memory_last_2.ext - technology: sky130A
+
+*.subckt memory_last_2 GND VDD word126 word127 Y7 Y6 Y5 Y4 Y3 Y2 Y1 Y0
+X0 VDD GND Y5 VDD sky130_fd_pr__pfet_01v8 ad=0.2397 pd=1.96 as=0.1836 ps=1.74 w=0.51 l=0.17
+X1 VDD GND Y3 VDD sky130_fd_pr__pfet_01v8 ad=0.2397 pd=1.96 as=0.1836 ps=1.74 w=0.51 l=0.17
+X2 VDD GND Y4 VDD sky130_fd_pr__pfet_01v8 ad=0.2397 pd=1.96 as=0.1836 ps=1.74 w=0.51 l=0.17
+X3 VDD GND Y7 VDD sky130_fd_pr__pfet_01v8 ad=0.2397 pd=1.96 as=0.1836 ps=1.74 w=0.51 l=0.17
+X4 Y3 word126 GND GND sky130_fd_pr__nfet_01v8 ad=0.2244 pd=1.9 as=0.4635 ps=3.36 w=0.51 l=0.17
+X5 VDD GND Y1 VDD sky130_fd_pr__pfet_01v8 ad=0.2397 pd=1.96 as=0.1836 ps=1.74 w=0.51 l=0.17
+X6 VDD GND Y2 VDD sky130_fd_pr__pfet_01v8 ad=0.2397 pd=1.96 as=0.1836 ps=1.74 w=0.51 l=0.17
+X7 GND word127 Y1 GND sky130_fd_pr__nfet_01v8 ad=0.2598 pd=1.79 as=0.2193 ps=1.88 w=0.51 l=0.17
+X8 VDD GND Y0 VDD sky130_fd_pr__pfet_01v8 ad=0.2397 pd=1.96 as=0.1836 ps=1.74 w=0.51 l=0.17
+X9 Y1 word126 GND GND sky130_fd_pr__nfet_01v8 ad=0.2244 pd=1.9 as=0.2598 ps=1.79 w=0.51 l=0.17
+X10 VDD GND Y6 VDD sky130_fd_pr__pfet_01v8 ad=0.2397 pd=1.96 as=0.1836 ps=1.74 w=0.51 l=0.17
+*.ends
+
