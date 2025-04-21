@@ -1,0 +1,23 @@
+% !TeX root = ..\research_paper.tex
+
+Reinforcement learning (RL, or DRL for deep reinforcement
+learning) is a form of machine learning where an agent
+will perform a task (such as floorplanning or routing)
+and then the solution will be evaluated and given either
+a punishment or a reward. The agent then ``learns''
+from that reward. The solutions that are given rewards
+will be replicated and iterated on, while those that
+are not will be rejected in future iterations. Hundreds
+of thousands of examples will be used in order for the
+neural network to effectively learn and perform in a
+way that fits design needs. A group from the Google
+Chip Implementation showed their results and methods
+in a 2020 paper. They mentioned that the reward system
+for their DRL was based on ``wirelength, because it
+is not only much cheaper to evaluate, but also correlates
+with power and performance (timing)'' (\cite{DBLP:journals/corr/abs-2004-10746}).
+
+The paper outlined performance improvements that resulted
+from using RL instead of simulated annealing processes. On
+average, wirelength and congestion decreased, meaning that
+overall power consumption and performance would be improved.

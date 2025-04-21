@@ -1,3 +1,42 @@
 % !TeX root = ..\research_paper.tex
 
-Ripup
+While partitioning certainly helps to solve the problem
+of routing and reducing the amount of crossing and overall
+interconnect length between nodes, the maze-routing
+algorithms still suffer from some problems. Most notably,
+they might suffer from significant congestion in high
+traffic areas, and a manual technique for resolving
+such conflicts is identifying which nets are problematic
+and manually rerouting those. Or, as could be said,
+``ripping'' and ``re-routing'' those nets. There have
+been attempts to replicate the human behavaior of rerouting
+with automated systems.
+
+When maze routing fails (for example, the path has become
+completely blocked by other nets), an example reroute
+effect index for evaluating whether a net should be
+rerouted can be shown with the following equation: $P(W)
+= \text{min} \{N_A(W) - L_A(W), N_B(W) - L_B(W)\}$ (\cite{52212}).
+This $P(W)$ is caluclated for each net $W$ in the region.
+
+In this equation, $W$ represents a blocking net in the
+area, and $N_A$ is the number of cells in that blocking
+net that could be reached by the source cell of the
+new path we are trying to reroute. Accordingly, $N_B$
+is the number of cells in that blocking net that could
+be reached by the destination cell of the new path.
+$L_A$ is 1 if the both of the pins of the blocking net
+are visible to the source cell of the new path, otherwise
+0. $L_B$ is similarly defined. Utilizing this expression
+for $P(W)$ we can determine whether attempting to reroute
+the net is even worthwhile. If $P(W) >= 1$, then it
+is worth attempting to reroute, otherwise no improvements
+are possible for that net $W$.
+
+Rip-up and rerouting is a technique that still has room
+to improve, especially as newer techniques utilize the
+analysis of multiple nets at a time, where this technique
+currently shows some weakness. The implementation used here
+is just an example of one rerouting technique that has
+been implemented in some cases, and can be a basis for other
+possibly more complex rip-up and rerouting techniques.

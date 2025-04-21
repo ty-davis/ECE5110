@@ -25,5 +25,16 @@ improves the power-consumption, and therefore the heat
 produced by the chip.
 
 In this essay I will talk about some of the interesting
-and important concepts that have emerged over the recent decades
-that pertain to automatic layout and routing techniques.
+and important concepts that have emerged over the recent
+decades that pertain to automatic layout and routing
+techniques. Many of the techniques in VLSI design are
+described as ``NP-complete'' or ``NP-hard problems''
+(\cite{9357584}), where NP means ``non-deterministic
+polynomial-time'' -- referencing the amount of time/compute
+power required to verify that a solution is valid is
+polynomial-time. Notably, the problems of cell placement,
+floorplanning, routing, etc. would take so much time
+to solve computationally that finding a perfect solution
+is not viable. As such, many of the proposed techniques
+rely on heuristics and approximations to find a near-complete
+answer.

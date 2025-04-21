@@ -1,3 +1,50 @@
 % !TeX root = ..\research_paper.tex
 
-Annealing here!
+The technique of ``simulated annealing'', much like
+the A$^*$ algorithm, has many uses beyond VLSI design,
+and being such a versatile tool can actually be used in
+multiple places in VLSI design, so it should be mentioned
+here.
+
+Simulated annealing can be used in floorplanning, cell placement,
+and even detail routing, as it's just a technique that wraps
+around an algorithm, rather than replacing it. As a process,
+it avoids local minima by allowing iterations on the starting
+conditions of an algorithm to vary widely at the start, and 
+more narrowly as computation continues. It gets its name from
+a processes in metallurgy known as ``annealing'' where materials
+are heated and cooled to reduce defects.
+
+On the high-level, here is how it works. Starting at
+some initial condition, the algorithm iteratively explores
+the solution space by making small random changes. After
+a given iteration, the solution is either accepted or
+rejected. If the conditions improve, then it is accepted,
+but if the conditions worsen the solution isn't necessarily
+rejected. The earlier iterations have a higher ``temperature''
+value which gradually decreases as the iterations go
+on. The higher the temperature value, the worse that
+a potential solution can be while still being selected.
+By allowing potential worse solutions to be accepted
+at the start, simulated annealing increases the chances
+of escaping local extrema, in an effort to find the
+global minimum or maximum of the function. 
+
+Simulated annealing finds such a useful place in VLSI
+design because many of the problems are NP-hard problems,
+where the compute time to find an optimal solution is
+unrealistic. An example using simulated annealing in
+VLSI could be in floorplanning, where exhaustively selecting
+the locations of hundreds of thousands of cells would
+be computationally impossible. So, the algorithm would
+suppose starting from a base condition where all of
+the cells are placed randomly on a substrate. After
+analyzing the possible solutions, moving some of the
+cells randomly (or heuristically) the solution is then
+analyzed. If the condition improves it is selected.
+But, based on the process of simulated annealing, if
+the temperature value is still high (e.g. it is an early
+iteration), a worse condition may be selected. Possible
+worse floorplanning will be chosen an iterated on, as
+this will reduce the chance of falling into a local
+extrema.
