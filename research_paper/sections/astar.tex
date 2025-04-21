@@ -1,0 +1,41 @@
+% !TeX root = ..\research_paper.tex
+
+The A$^*$ algorithm (pronounced ``A-star'') is an algorithm
+that essentially solves the same problem as Lee's algorithm,
+though in a more time and memory-efficient way. It achieves
+superior efficiency by estimating which paths are more
+likely to find the solution earlier, resulting in fewer
+cells checked.
+
+The A$^*$ algorithm is implemented as follows. Imagining
+a similar grid situation as in the example when considering
+Lee's algorithm, the starting cell's neighbors will
+all be considered, and their ``costs'' estimated with
+a heuristic function. The heuristic function ($f(n)$)
+follows the from $f(n) = g(n) + h(n)$, where $g(n)$
+is the cost of getting to a certain cell from the starting
+cell, and $h(n)$ is the estimated cost of getting from
+that certain cell to the destination cell. You can think
+of it essentially as an expansion of Lee's algorithm,
+where Lee's algorithm considered only $g(h)$, neglecting
+the cost of each neighbor's path towards the destination
+cell.
+
+Now, for each of those neighbors whose heuristic function
+$f$ is lowest, you iterate and calculate the same for its
+neighbors. Unlike Lee's algorithm, instead of searching
+breadth-first in every direction from the starting cell,
+the A$^*$ algorithm avoids evaluating or estimating the
+cost of the cells which seem least likely to result in the
+shortest path to the destination cell.
+
+A deeper look into the A$^*$ algorithm shows that it may
+not only be used for cells on a grid, but that it can
+be used for any graph composed of nodes connected by
+edges, where the cost of each edge is known. For example,
+explored in the paper by \cite{4082128}, we see their
+example of the implementation of the A$^*$ algorithm
+for cities connected by roads. The algorithm may use
+the calculated cost $g(n)$ (found as it traverses the graph
+and sums the edge-costs) and the estimated $h(n)$ ``might
+be the airline distance between city $n$ and the goal city.''

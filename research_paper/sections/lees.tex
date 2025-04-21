@@ -1,0 +1,53 @@
+% !TeX root = ..\research_paper.tex
+
+Lee's Algorithm was one of the first algorithms used
+for grid-based automatic routing and was made in the
+early 1960's. It was initially an endeavor to answer
+the question, ``Is it possible to find procedures which
+would enable a computer to solve efficiently path-connection
+problems inherent in logical drawing, wiring diagramming,
+and optimal route finding?'' (\cite{5219222}). In response
+to that question, Lee says, ``The results are highly
+encouraging.''
+
+In today's standards the algorithm is rather simple,
+but it was originally implemented on an IBM 704 computer,
+and I believe that the idea is interesting enough to
+be explored here. The premise of the algorithm is that
+you have a set of cells in some space, and a way to
+determine each cells' neighbors. The shortest path between
+two cells, $c^i$ and $c^j$ can be determined in a breadth-first
+approach by iteratively considering all of the neighbors
+of $c^i$, and their neighbors, until you reach $c^j$.
+To dive a little deeper into the implementation of the
+algorithm, imagine a grid of cells of any size. Let
+$c^i$ be on the left side, and you're trying to reach
+$c^j$, which is placed on the right side. However, between
+$c^i$ and $c^j$ is some obstacle. Some of the cells
+between them are marked as an obstacle, representing
+another wire connecting two other traces.
+
+Starting at $c^i$ and marking it with the value $0$,
+consider all of its neighbors (the four adjacent squares
+in the grid) and mark them with the value $1$, assuming
+that none of them are blocked. Repeat this process for
+all of the neighbors, marking the subsequent neighbors
+with increasingly higher values (1, 2, 3, \dots) until
+you reach the destination cell $c^j$. Now, from $c^j$, simply
+follow the cells marked with the lowest number
+back to the original starting cell $c^i$. The number
+that each cell is marked with can be interpreted as its distance
+to the starting cell $c^i$.
+
+Lee's algorithm is effective, but because of its breadth-first
+nature, it becomes inefficient in memory and speed.
+A number of other algorithms have been shown to improve
+the performance of smallest path algorithms. Consider,
+as well, that Lee's algorithm only considers paths on
+a 2-dimensional plane, neglecting the use of metal-layers
+and vias. Beyond this, Lee's algorithm may offer the
+shortest path to whichever route is considered first,
+when a more optimal layout for the overall design may
+be achieved with an algorithm that considers which connections
+to make first. Of course, that's why routing usually comes
+as a later step, following placement and floorplanning.

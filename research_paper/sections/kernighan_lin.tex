@@ -1,0 +1,53 @@
+% !TeX root = ..\research_paper.tex
+
+One of the first things that should be done in the physical
+design process, considerably earlier than the maze routing
+signals above, is partitioning the design. In the perspective
+of VLSI design, imagine a large netlist showing the
+connections between different logic cells in a graph
+configuration. Choosing how to place which cells closer
+to which can be a daunting task to do by hand, and a
+good first step might be separate all of the cells into
+smaller groups so that you can decide how to place them
+in each group. Such a process is called ``partitioning'',
+and the goal of an effective partitioning algorithm
+is to keep the total number of connections between each
+partition to a minimum.
+
+The Kernighan-Lin algorithm in an effective algorithm
+that relies on heuristics to produce good solutions
+in a reasonable amount of time. The steps of the Kernighan-Lin
+algorithm are once again straightforward. An example
+follows that shows how to split a graph into two equal
+(or about equal) subsets while minimizing the number/cost
+of edge cuts between the two subsets.
+
+First split the graph into subsets $A$ and $B$. With both
+subsets separated, an estimate of the improvement that
+would occur if you swapped each of the nodes to the
+other subset is computed. Of course, calculating the
+cost for each of the nodes for each of the subsets possible
+in unrealistic beyond trivial examples, so an estimation
+is necessary. In order to estimate the gain of swapping
+a given node to the other subset, the following are
+calculated. The ``internal cost'' ($I(v)$) is the sum
+of edge weights to nodes in the same set. The ``external
+cost'' ($E(v)$) is the sum of edge weights to nodes
+in the other set. The D-value is then shown by $D(v)
+= E(v) - I(v)$, this is how much the cost would improve
+by moving node $v$ to the other side. A D-value is essentially
+an estimate of how much better the cost would be if the
+node $v$ were in the other subset.
+
+After computing D-values for all of the nodes, find
+which nodes are best to swap between the two subsets.
+The equation used to do this is $g(a,b) = D(a) + D(b)
+- 2 \cdot w(a,b)$, where $w(a,b)$ is the edge-cost between
+the two nodes $a$ and $b$ if there is one. Subtracting
+that term from the equation essentially disincentivizes
+swapping two nodes if they are connected to each other, assuming
+that there is a better swap available elsewhere.
+
+This algorithm is effective because it attempts ``to
+identify [the nodes to swap] from A and B, without considering
+all possible choices'' (\cite{6771089}).

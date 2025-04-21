@@ -1,0 +1,29 @@
+% !TeX root = ..\research_paper.tex
+
+As of the early 2000's, ``most routing algorithms use[d]
+a Manhattan geometry with horizontal and vertical traces''
+(\cite{1360580}). Such designs prevailed because of
+their simplicity, but the increase in wire length (27\%
+longer on average than the Euclidean distance) of the
+interconnections resulted in significantly slower circuits.
+The concept of ``non-Manhattan'' routing, therefore,
+is any routing that doesn't strictly adhere to a grid.
+
+Non-Manhattan layout designs can be applied not only
+to VLSI design projects, but also PCB and other circuit
+layouts. The study cited above showed the use of two
+different Non-Manhattan layout algorithms that routed
+wires on horizontal, vertical, and \ang{45} diagonal
+lines, but other non-Manhattan layout paradigms exist
+which operate on other bases. While the results from
+that study can only be applied to the specific layout
+algorithms tested, it is safe to say that Non-Manhattan
+layouts should always be a consideration when trying
+to decrease average interconnection length.
+
+As shown with the A$^*$ algorithm, routing doesn't necessarily
+have to take place on a strict grid of cells. Non-manhattan
+graphs can be used in combination with the maze-routing
+algorithms to more effectively plan routes and reduce
+the total interconnect length.
+
