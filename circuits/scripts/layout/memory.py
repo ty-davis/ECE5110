@@ -24,28 +24,52 @@ with open('num_bits_per_channel.txt', 'r') as fin:
     num_bits_per_channel = int(fin.read().strip())
 
 # MEASUREMENTS
-WORD_SIZE             = 8
-NUM_WORDS             = 2 ** (num_bits_per_channel + 2)
-BITLINE_WIDTH         = 33
-BITLINE_GAP           = 33 + 17
-BITLINE_TOP_OFFSET    = 41
-BITLINE_BOTTOM_OFFSET = 0
-TRN_WIDTH             = 51
-POLY_WIDTH            = 17
-NUM_GROUND_LINES      = math.ceil(WORD_SIZE / 2)
-NUM_BIT_AND_GROUND    = WORD_SIZE + NUM_GROUND_LINES
+WORD_SIZE               = 8
+NUM_WORDS               = 2 ** (num_bits_per_channel + 2)
+BITLINE_WIDTH           = 33
+BITLINE_GAP             = 33 + 17
+BITLINE_TOP_OFFSET      = 41
+BITLINE_BOTTOM_OFFSET   = 0
+POLY_WIDTH              = 17
+NUM_GROUND_LINES        = math.ceil(WORD_SIZE / 2)
+NUM_BIT_AND_GROUND      = WORD_SIZE + NUM_GROUND_LINES
 
-POLY_LEFT_OVERHANG    = 51
-POLY_RIGHT_OVERHANG   = 0 # actually already accounted for with BITLINE_GAP
-POLY_GAP              = 54
+POLY_LEFT_OVERHANG      = 51
+POLY_RIGHT_OVERHANG     = 0 # actually already accounted for with BITLINE_GAP
+POLY_GAP                = 54
 
-NDIFF_WIDTH           = 51
-NDIFF_HEIGHT          = 33
-NDIFF_LEFT_OVERHANG   = (NDIFF_WIDTH - BITLINE_WIDTH) // 2
-NDIFF_RIGHT_OVERHANG  = NDIFF_WIDTH - BITLINE_WIDTH - NDIFF_LEFT_OVERHANG
+NDIFF_WIDTH             = 51
+NDIFF_HEIGHT            = 33
+NDIFF_LEFT_OVERHANG     = (NDIFF_WIDTH - BITLINE_WIDTH) // 2
+NDIFF_RIGHT_OVERHANG    = NDIFF_WIDTH - BITLINE_WIDTH - NDIFF_LEFT_OVERHANG
 
-POLY_LENGTH           = NUM_BIT_AND_GROUND * (BITLINE_WIDTH + BITLINE_GAP) + POLY_LEFT_OVERHANG + POLY_RIGHT_OVERHANG
-BITLINE_LENGTH        = NUM_WORDS * (POLY_WIDTH + POLY_GAP) + BITLINE_TOP_OFFSET + BITLINE_BOTTOM_OFFSET
+POLY_LENGTH             = NUM_BIT_AND_GROUND * (BITLINE_WIDTH + BITLINE_GAP) + POLY_LEFT_OVERHANG + POLY_RIGHT_OVERHANG
+BITLINE_LENGTH          = NUM_WORDS * (POLY_WIDTH + POLY_GAP) + BITLINE_TOP_OFFSET + BITLINE_BOTTOM_OFFSET
+
+GLOBAL_GROUND_WIDTH     = 48
+GLOBAL_GROUND_BOT_GAP   = 17
+GLOBAL_GROUND_TOP_GAP   = 3
+GLOBAL_GROUND_PSUB_BOT  = 10
+GLOBAL_GROUND_PSUB_LEFT = 12
+
+TRN_POLY_GAP            = 3
+NWELL_HEIGHT            = 180
+NWELL_LEFT_OVERHANG     = 27
+NWELL_RIGHT_OVERHANG    = 27
+HEADER_START_HEIGHT     = 19
+PULL_UP_GAP_BOTTOM      = 18
+PDIFF_WIDTH             = NDIFF_WIDTH
+PDIFF_PAD_HEIGHT        = 33
+PDIFF_HEIGHT            = PDIFF_PAD_HEIGHT + TRN_POLY_GAP + POLY_WIDTH + TRN_POLY_GAP + PDIFF_PAD_HEIGHT
+PDIFF_LEFT_OVERHANG     = NDIFF_LEFT_OVERHANG
+PDIFF_RIGHT_OVERHANG    = NDIFF_RIGHT_OVERHANG
+
+VDD_CONNECTOR_HEIGHT    = 17
+VDD_WIDTH = 48
+VDD_EDGE_GAP            = 2
+NSUB_EDGE_GAP           = 16
+NSUBC_EDGE_GAP          = 12
+NSUB_VERT_GAP           = 10
 
 def ground_row_position(row_num):
     """Points to top of ground row ndiff area"""
@@ -59,11 +83,6 @@ def bit_line_position(bit_num):
     """Points to the left of a bitline locali area"""
     bit0 = (NUM_BIT_AND_GROUND - 1) * (BITLINE_WIDTH + BITLINE_GAP)
     return bit0 - math.ceil(3/2 * bit_num) * (BITLINE_WIDTH + BITLINE_GAP)
-
-    # 1 -> 2
-    # 2 -> 3
-    # 3 -> 5
-    # 4 -> 6
 
 def square(x, period=32):
     return 0 if x < (period/2) else 255
@@ -91,7 +110,7 @@ def print_memory():
         print()
 
 def poly_lines(poly_left, poly_top):
-    poly = "<< poly >>\n"
+    poly = ""
     for i in range(NUM_WORDS):
         x1 = poly_left
         x2 = poly_left + POLY_LENGTH
@@ -101,7 +120,7 @@ def poly_lines(poly_left, poly_top):
     return poly
 
 def locali_lines(li_left, li_top):
-    locali = "<< locali >>\n"
+    locali = ""
     for i in range(NUM_BIT_AND_GROUND):
         x1 = li_left + i * (BITLINE_WIDTH + BITLINE_GAP)
         x2 = x1 + BITLINE_WIDTH
@@ -109,6 +128,128 @@ def locali_lines(li_left, li_top):
         y2 = li_top
         locali += f"rect {x1} {y1} {x2} {y2}\n"
     return locali
+
+def pull_ups():
+    obj = {
+        'locali': "",
+        'nwell': "",
+        'metal1': "",
+        'viali': "",
+        'pdiff': "",
+        'pdiffc': "",
+    }
+    # draw the nwell
+    x1 = -NWELL_LEFT_OVERHANG
+    x2 = bit_line_position(0) + BITLINE_WIDTH + NWELL_RIGHT_OVERHANG
+    y1 = HEADER_START_HEIGHT + BITLINE_WIDTH + GLOBAL_GROUND_BOT_GAP + GLOBAL_GROUND_WIDTH + GLOBAL_GROUND_TOP_GAP
+    y2 = y1 + NWELL_HEIGHT
+    obj['nwell'] += f"rect {x1} {y1} {x2} {y2}\n"
+    print(obj['nwell'])
+    
+    # draw the metal1 connectors and pull-up transistors
+    for i in range(WORD_SIZE):
+        x1 = bit_line_position(i)
+        x2 = x1 + BITLINE_WIDTH
+        y1 = HEADER_START_HEIGHT
+        y2 = y1 + BITLINE_WIDTH
+        obj['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+        obj['viali'] += f"rect {x1 + 8} {y1 + 8} {x2 - 8} {y2 - 8}\n"
+        y2 = y1 + BITLINE_WIDTH + GLOBAL_GROUND_BOT_GAP + GLOBAL_GROUND_WIDTH + GLOBAL_GROUND_TOP_GAP + PULL_UP_GAP_BOTTOM + PDIFF_PAD_HEIGHT
+        obj['metal1'] += f"rect {x1} {y1} {x2} {y2}\n"
+
+        pdiff_bottom = HEADER_START_HEIGHT + BITLINE_WIDTH + GLOBAL_GROUND_BOT_GAP + GLOBAL_GROUND_WIDTH + GLOBAL_GROUND_TOP_GAP + PULL_UP_GAP_BOTTOM
+        
+        # draw the pad on the bottom
+        y1 = pdiff_bottom
+        y2 = y1 + BITLINE_WIDTH
+        obj['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+        obj['pdiffc'] += f"rect {x1 + 8} {y1 + 8} {x2 - 8} {y2 - 8}\n"
+        obj['viali'] += f"rect {x1 + 8} {y1 + 8} {x2 - 8} {y2 - 8}\n"
+
+        # draw the ndiff
+        x1 -= PDIFF_LEFT_OVERHANG
+        x2 = x1 + PDIFF_WIDTH
+        y1 = pdiff_bottom
+        y2 = y1 + PDIFF_HEIGHT
+        obj['pdiff'] += f"rect {x1} {y1} {x2} {y2}\n"
+
+        # draw the pad on the top
+        y1 = pdiff_bottom + BITLINE_WIDTH + TRN_POLY_GAP + POLY_WIDTH + TRN_POLY_GAP
+        y2 = y1 + PDIFF_PAD_HEIGHT
+        obj['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+        obj['pdiffc'] += f"rect {x1 + 8} {y1 + 8} {x2 - 8} {y2 - 8}\n"
+        print(f"PAD: rect {x1} {y1} {x2} {y2}\n")
+
+        # connect the pad to the VDD rail at the top
+        y1 += PDIFF_PAD_HEIGHT
+        y2 = y1 + VDD_CONNECTOR_HEIGHT
+        obj['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+    return obj
+
+def grounds_and_vdd():
+    obj = {
+        'locali': "",
+        'psubdiff': "",
+        'psubdiffcont': "",
+        'poly': "",
+        'polycont': "",
+        'nsubdiff': "",
+        'nsubdiffcont': "",
+    }
+
+    # draw the ground area
+    x1 = -NWELL_LEFT_OVERHANG
+    x2 = bit_line_position(0) + BITLINE_WIDTH + NWELL_RIGHT_OVERHANG
+    y1 = HEADER_START_HEIGHT + BITLINE_WIDTH + GLOBAL_GROUND_BOT_GAP
+    y2 = y1 + GLOBAL_GROUND_WIDTH
+    obj['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+
+    y1 += GLOBAL_GROUND_PSUB_BOT
+    y2 -= GLOBAL_GROUND_PSUB_BOT
+    obj['psubdiff'] += f"rect {x1} {y1} {x2} {y2}\n"
+
+    obj['psubdiffcont'] += f"rect {x1 + GLOBAL_GROUND_PSUB_LEFT} {y1} {x2 - GLOBAL_GROUND_PSUB_LEFT} {y2}\n"
+
+    y1 -= GLOBAL_GROUND_PSUB_BOT
+    x2 = x1
+    x1 -= BITLINE_WIDTH
+    y2 = y1 + 130
+    obj['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+    y1 = y2 - BITLINE_WIDTH
+    obj['poly'] += f"rect {x1} {y1} {x2} {y2}\n"
+    obj['polycont'] += f"rect {x1 + 8} {y1 + 8} {x2 - 8} {y2 - 8}\n"
+    x1 += BITLINE_WIDTH
+    y1 += (BITLINE_WIDTH - POLY_WIDTH) // 2
+    y2 = y1 + POLY_WIDTH
+    x2 = bit_line_position(0) + BITLINE_WIDTH + 40
+    obj['poly'] += f"rect {x1} {y1} {x2} {y2}\n"
+
+    for i in range(NUM_GROUND_LINES):
+        x1 = ground_line_position(i)
+        x2 = x1 + BITLINE_WIDTH
+        y1 = BITLINE_TOP_OFFSET
+        y2 = HEADER_START_HEIGHT + BITLINE_WIDTH + GLOBAL_GROUND_BOT_GAP
+        obj['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+
+    # draw the VDD
+    y1 = HEADER_START_HEIGHT + BITLINE_WIDTH + GLOBAL_GROUND_BOT_GAP + GLOBAL_GROUND_WIDTH + GLOBAL_GROUND_TOP_GAP + PULL_UP_GAP_BOTTOM + BITLINE_WIDTH + TRN_POLY_GAP + POLY_WIDTH + TRN_POLY_GAP + PDIFF_PAD_HEIGHT + VDD_CONNECTOR_HEIGHT
+    y2 = y1 + VDD_WIDTH
+    x1 = -NWELL_LEFT_OVERHANG + VDD_EDGE_GAP
+    x2 = bit_line_position(0) + BITLINE_WIDTH + NWELL_RIGHT_OVERHANG - VDD_EDGE_GAP
+    obj['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+    # TODO: INSERT LABEL FOR VDD HERE
+    x1 += NSUB_EDGE_GAP
+    x2 -= NSUB_EDGE_GAP
+    y1 += NSUB_VERT_GAP
+    y2 -= NSUB_VERT_GAP
+    obj['nsubdiff'] += f"rect {x1} {y1} {x2} {y2}\n"
+    x1 += NSUBC_EDGE_GAP
+    x2 -= NSUBC_EDGE_GAP
+    obj['nsubdiffcont'] += f"rect {x1} {y1} {x2} {y2}\n"
+
+    return obj
+
+
 
 def trn_blocks(left, top, df):
     ground_lines = { f"ground_line_{i}": set()  for i in range(NUM_GROUND_LINES) }
@@ -152,13 +293,12 @@ def trn_blocks(left, top, df):
                     bit_lines[b_info['bit_line']].add(f'word{full_addr}')
 
     output = {
-        'ndiff': "<< ndiff >>\n",
-        'ndcontact': "<< ndcontact >>\n"
+        'ndiff': "",
+        'ndcontact': ""
     }
 
     # now draw the transistors
     for ground_row_name, ground_row_details in ground_rows.items():
-        print(ground_row_name)
         grn_match = re.match(r"ground_row_(\d+)", ground_row_name)
         if not grn_match:
             continue
@@ -217,9 +357,7 @@ def trn_blocks(left, top, df):
         if not bln_match:
             continue
         bit_line_num = int(bln_match.group(1))
-        # print(bit_line_name)
         for detail in bit_line_details:
-            # print("DETAIL:", detail)
             match = re.match(r"word(\d+)", detail)
             if not match:
                 continue
@@ -234,9 +372,6 @@ def trn_blocks(left, top, df):
 
 
     return output
-    # pprint(ground_rows)
-    # pprint(bit_rows)
-    # pprint(bit_lines)
 
     
 def test():
@@ -300,22 +435,48 @@ def main():
     # SPECIFICALLY, LEFT-MOST BITLINE WILL HAVE LEFT BORDER AT X=0, AND TOP-MOST POLYSILICON
     # WILL HAVE TOP BORDER AT Y=0
     
-    blocks = {}
+    blocks_names = [
+        'nwell',
+        'nmos',
+        'pmos',
+        'ndiff',
+        'pdiff',
+        'ndiffc',
+        'pdiffc',
+        'psubdiff',
+        'nsubdiff',
+        'psubdiffcont',
+        'nsubdiffcont',
+        'ndcontact',
+        'poly',
+        'polycont',
+        'locali',
+        'viali',
+        'metal1',
+    ]
+    blocks = {block: f"<< {block} >>\n" for block in blocks_names }
 
     # write all of the polysilicon lines
-    blocks['poly'] = poly_lines(-POLY_LEFT_OVERHANG, 0)
+    blocks['poly'] += poly_lines(-POLY_LEFT_OVERHANG, 0)
 
 
     # write all of the ground and bit lines (locali)
-    blocks['locali'] = locali_lines(0, BITLINE_TOP_OFFSET)
+    blocks['locali'] += locali_lines(0, BITLINE_TOP_OFFSET)
 
 
     # write all of the ndiff/contacts according to the logic
     trn_blks = trn_blocks(0, 0, df)
-    blocks['ndiff'] = trn_blks['ndiff']
-    blocks['ndcontact'] = trn_blks['ndcontact']
+    blocks['ndiff'] += trn_blks['ndiff']
+    blocks['ndcontact'] += trn_blks['ndcontact']
 
     # extra stuff like the pull-up resistors and stuff
+    pull_ups_blks = pull_ups()
+    for block_names in pull_ups_blks.keys():
+        blocks[block_names] += pull_ups_blks[block_names]
+
+    ground_blks = grounds_and_vdd()
+    for block_names in ground_blks.keys():
+        blocks[block_names] += ground_blks[block_names]
 
     with open('memory_out.mag', 'w') as fout:
         header = """magic
@@ -323,10 +484,8 @@ tech sky130A
 timestamp 1744679307
 """
         fout.write(header)
-        fout.write(blocks['poly'])
-        fout.write(blocks['locali'])
-        fout.write(blocks['ndiff'])
-        fout.write(blocks['ndcontact'])
+        for block in blocks_names:
+            fout.write(blocks[block])
         fout.write("<< end >>")
     # plt.show()
 
