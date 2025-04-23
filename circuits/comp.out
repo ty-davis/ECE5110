@@ -8,55 +8,190 @@ Equate elements:  no current cell.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
 
 Subcircuit summary:
-Circuit 1: scripts/layout/memory_last_2.sp |Circuit 2: ../library/spice/memory_last_2. 
+Circuit 1: scripts/layout/decoder_test.spi |Circuit 2: ../library/spice/decoder_out_2_ 
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__pfet_01v8 (8)                |sky130_fd_pr__pfet_01v8 (8)                
-sky130_fd_pr__nfet_01v8 (3)                |sky130_fd_pr__nfet_01v8 (3)                
-Number of devices: 11                      |Number of devices: 11                      
-Number of nets: 12                         |Number of nets: 12                         
+sky130_fd_pr__pfet_01v8 (28)               |sky130_fd_pr__pfet_01v8 (28)               
+sky130_fd_pr__nfet_01v8 (28)               |sky130_fd_pr__nfet_01v8 (28)               
+Number of devices: 56                      |Number of devices: 56                      
+Number of nets: 37                         |Number of nets: 37                         
 ---------------------------------------------------------------------------------------
 Resolving symmetries by property value.
 Resolving symmetries by pin name.
 Resolving symmetries by net name.
-Netlists match with 2 symmetries with property errors.
-sky130_fd_pr__nfet_01v8:4 vs. sky130_fd_pr__nfet_01v8:M608:
+Netlists match with 18 symmetries with property errors.
+sky130_fd_pr__nfet_01v8:8 vs. sky130_fd_pr__nfet_01v8:M6:
  l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:9 vs. sky130_fd_pr__nfet_01v8:M609:
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:48 vs. sky130_fd_pr__nfet_01v8:M0:
  l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:7 vs. sky130_fd_pr__nfet_01v8:M610:
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:17 vs. sky130_fd_pr__nfet_01v8:M1:
  l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:1 vs. sky130_fd_pr__pfet_01v8:M5:
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:52 vs. sky130_fd_pr__nfet_01v8:M3:
  l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:5 vs. sky130_fd_pr__pfet_01v8:M7:
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:29 vs. sky130_fd_pr__nfet_01v8:M4:
  l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:10 vs. sky130_fd_pr__pfet_01v8:M8:
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:22 vs. sky130_fd_pr__nfet_01v8:M2:
  l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:0 vs. sky130_fd_pr__pfet_01v8:M1:
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:33 vs. sky130_fd_pr__nfet_01v8:M5:
  l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:8 vs. sky130_fd_pr__pfet_01v8:M6:
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:27 vs. sky130_fd_pr__nfet_01v8:M15:
  l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:2 vs. sky130_fd_pr__pfet_01v8:M2:
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:35 vs. sky130_fd_pr__nfet_01v8:M18:
  l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:6 vs. sky130_fd_pr__pfet_01v8:M4:
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:30 vs. sky130_fd_pr__nfet_01v8:M16:
  l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:3 vs. sky130_fd_pr__pfet_01v8:M3:
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:5 vs. sky130_fd_pr__nfet_01v8:M17:
  l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.51   circuit2: 1   (delta=64.9%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:42 vs. sky130_fd_pr__nfet_01v8:M19:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:1 vs. sky130_fd_pr__nfet_01v8:M14:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:47 vs. sky130_fd_pr__nfet_01v8:M20:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:44 vs. sky130_fd_pr__nfet_01v8:M43:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:43 vs. sky130_fd_pr__nfet_01v8:M31:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:23 vs. sky130_fd_pr__nfet_01v8:M55:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:12 vs. sky130_fd_pr__nfet_01v8:M41:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:51 vs. sky130_fd_pr__nfet_01v8:M45:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:39 vs. sky130_fd_pr__nfet_01v8:M29:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:50 vs. sky130_fd_pr__nfet_01v8:M49:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:18 vs. sky130_fd_pr__nfet_01v8:M35:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:19 vs. sky130_fd_pr__nfet_01v8:M47:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:14 vs. sky130_fd_pr__nfet_01v8:M33:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:28 vs. sky130_fd_pr__nfet_01v8:M51:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:11 vs. sky130_fd_pr__nfet_01v8:M37:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:36 vs. sky130_fd_pr__nfet_01v8:M53:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__nfet_01v8:3 vs. sky130_fd_pr__nfet_01v8:M39:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:32 vs. sky130_fd_pr__pfet_01v8:M7:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:10 vs. sky130_fd_pr__pfet_01v8:M21:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:31 vs. sky130_fd_pr__pfet_01v8:M26:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:24 vs. sky130_fd_pr__pfet_01v8:M12:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:13 vs. sky130_fd_pr__pfet_01v8:M22:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:7 vs. sky130_fd_pr__pfet_01v8:M8:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:55 vs. sky130_fd_pr__pfet_01v8:M9:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:4 vs. sky130_fd_pr__pfet_01v8:M23:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:46 vs. sky130_fd_pr__pfet_01v8:M24:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:38 vs. sky130_fd_pr__pfet_01v8:M10:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:37 vs. sky130_fd_pr__pfet_01v8:M11:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:49 vs. sky130_fd_pr__pfet_01v8:M25:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:21 vs. sky130_fd_pr__pfet_01v8:M42:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:20 vs. sky130_fd_pr__pfet_01v8:M30:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:54 vs. sky130_fd_pr__pfet_01v8:M13:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:6 vs. sky130_fd_pr__pfet_01v8:M27:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:41 vs. sky130_fd_pr__pfet_01v8:M40:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:2 vs. sky130_fd_pr__pfet_01v8:M54:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:26 vs. sky130_fd_pr__pfet_01v8:M44:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:16 vs. sky130_fd_pr__pfet_01v8:M28:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:53 vs. sky130_fd_pr__pfet_01v8:M34:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:25 vs. sky130_fd_pr__pfet_01v8:M48:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:40 vs. sky130_fd_pr__pfet_01v8:M36:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:9 vs. sky130_fd_pr__pfet_01v8:M50:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:45 vs. sky130_fd_pr__pfet_01v8:M32:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:0 vs. sky130_fd_pr__pfet_01v8:M46:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:34 vs. sky130_fd_pr__pfet_01v8:M38:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+sky130_fd_pr__pfet_01v8:15 vs. sky130_fd_pr__pfet_01v8:M52:
+ l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
+ w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
 Cells have no pins;  pin matching not needed.
-Device classes scripts/layout/memory_last_2.spice and ../library/spice/memory_last_2.spice are equivalent.
+Device classes scripts/layout/decoder_test.spice and ../library/spice/decoder_out_2_rows.spice are equivalent.
 
 Final result: Circuits match uniquely.
 Property errors were found.
 
 The following cells had property errors:
- scripts/layout/memory_last_2.spice
+ scripts/layout/decoder_test.spice

@@ -1,0 +1,61 @@
+* NGSPICE file created from decoder_test.ext - technology: sky130A
+
+*.subckt decoder_test VDD A0 A1 A2 A3 A4 A5 A6 word0 GND word1
+X0 VDD A2 a_1282_n1674# VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X1 GND A6 word1 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X2 VDD A6 a_226_n1674# VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X3 a_3782_n1444# A5 GND GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X4 a_1464_n1950# A2 a_1200_n1950# VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X5 GND A3 word1 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X6 a_408_n1950# A6 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X7 a_1728_n1808# A1 a_1464_n1808# VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X8 GND A0 word0 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X9 a_3518_n1444# A4 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X10 word1 a_1810_n1674# a_1728_n1950# VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.10535 ps=0.92 w=0.43 l=0.17
+X11 GND A4 a_754_n1674# GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X12 a_4046_n1444# A6 GND GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X13 a_1728_n1950# A1 a_1464_n1950# VDD sky130_fd_pr__pfet_01v8 ad=0.10535 pd=0.92 as=0.1763 ps=1.68 w=0.43 l=0.17
+X14 a_2990_n1444# A2 GND GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X15 VDD A5 a_490_n1674# VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X16 a_2726_n1444# A1 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X17 GND A5 word0 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X18 a_3254_n1444# A3 GND GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X19 GND A2 a_1282_n1674# GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X20 VDD A0 a_1810_n1674# VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X21 a_2462_n1444# A0 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X22 GND A4 word0 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X23 GND A6 a_226_n1674# GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X24 a_672_n1808# A5 a_408_n1808# VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X25 VDD A3 a_1018_n1674# VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X26 VDD A1 a_1546_n1674# VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X27 GND A5 word1 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X28 a_3518_n1444# A4 GND GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X29 GND A2 word0 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X30 GND A4 word1 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X31 a_672_n1950# A5 a_408_n1950# VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X32 word0 A0 a_1728_n1808# VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X33 GND A1 word0 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X34 a_3782_n1444# A5 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X35 GND A2 word1 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X36 GND A5 a_490_n1674# GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X37 a_936_n1808# A4 a_672_n1808# VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X38 a_1200_n1808# A3 a_936_n1808# VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X39 a_2726_n1444# A1 GND GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X40 VDD A4 a_754_n1674# VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X41 a_4046_n1444# A6 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X42 GND A1 word1 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.10535 ps=0.92 w=0.43 l=0.17
+X43 GND A0 a_1810_n1674# GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X44 a_2462_n1444# A0 GND GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X45 a_2990_n1444# A2 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X46 a_1200_n1950# A3 a_936_n1950# VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X47 word1 a_2462_n1444# GND GND sky130_fd_pr__nfet_01v8 ad=0.10535 pd=0.92 as=0.1763 ps=1.68 w=0.43 l=0.17
+X48 GND A6 word0 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X49 a_936_n1950# A4 a_672_n1950# VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X50 GND A3 a_1018_n1674# GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X51 GND A1 a_1546_n1674# GND sky130_fd_pr__nfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X52 GND A3 word0 GND sky130_fd_pr__nfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X53 a_3254_n1444# A3 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.1548 pd=1.58 as=0.1548 ps=1.58 w=0.43 l=0.17
+X54 a_408_n1808# A6 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+X55 a_1464_n1808# A2 a_1200_n1808# VDD sky130_fd_pr__pfet_01v8 ad=0.1763 pd=1.68 as=0.1763 ps=1.68 w=0.43 l=0.17
+*.ends
+
