@@ -73,7 +73,7 @@ C {devices/gnd.sym} 20 50 0 0 {name=l2 lab=GND}
 C {devices/code.sym} 60 -360 0 0 {name=s1 only_toplevel=false value="
 .control
 save all
-tran 1n 4u
+tran 1n 80u
 plot V(CLK) V(Q0)+2 V(Q1)+4 V(Q2)+6 V(Q3)+8 V(Q4)+10 V(Q5)+12 V(Q6)+14 V(Q7)+16 
 .endc
 "}
