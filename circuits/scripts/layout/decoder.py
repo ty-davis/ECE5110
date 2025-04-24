@@ -338,7 +338,7 @@ def vdd_gnd(left, top):
 
     # nwell
     out['nwell'] += rect(x1 - NWELL_LEFT_OVERHANG, y1_vert - 2, x1 - NWELL_LEFT_OVERHANG + nwell_width, top + 78)
-    out['nwell'] += rect(x1 - NWELL_LEFT_OVERHANG + nwell_width, y1 - 10, x2 + 2, top + 78)
+    out['nwell'] += rect(x1 - NWELL_LEFT_OVERHANG + nwell_width, y1 - 10, x2 + NWELL_LEFT_OVERHANG, top + 78)
 
     # ground lines
     x1_bot = left + VDD_WIDTH + VDD_TRN_CONNECTION + 2 * NUM_BITS * (TRN_PAD_WIDTH + TRN_DIFF_GAP * 2 + POLY_WIDTH) + CHASM_WIDTH + TRN_PAD_WIDTH

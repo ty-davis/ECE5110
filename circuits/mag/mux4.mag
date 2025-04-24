@@ -1,0 +1,101 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1745483395
+<< locali >>
+rect 4 864 1910 958
+rect 112 514 178 580
+rect 502 530 568 596
+rect 744 514 810 580
+rect 1134 530 1200 596
+rect 572 412 672 478
+rect 1204 412 1253 478
+rect 1484 434 1550 500
+rect 1592 434 1658 500
+rect 1836 412 1902 478
+rect 609 262 672 412
+rect 608 224 620 262
+rect 660 224 672 262
+rect 608 210 672 224
+rect 4 2 1910 96
+<< viali >>
+rect 1381 519 1435 573
+rect 1771 535 1825 589
+rect 229 439 283 493
+rect 340 446 382 488
+rect 866 446 906 488
+rect 967 439 1021 493
+rect 1253 412 1307 478
+rect 620 224 660 262
+<< metal1 >>
+rect 223 645 920 711
+rect 223 500 289 645
+rect 220 493 289 500
+rect 220 439 229 493
+rect 283 439 289 493
+rect 220 434 289 439
+rect 223 427 289 434
+rect 328 488 394 500
+rect 328 446 340 488
+rect 382 446 394 488
+rect 328 393 394 446
+rect 854 488 920 645
+rect 1247 635 1831 701
+rect 854 446 866 488
+rect 906 446 920 488
+rect 854 434 920 446
+rect 961 493 1027 505
+rect 961 439 967 493
+rect 1021 439 1027 493
+rect 961 393 1027 439
+rect 1247 478 1313 635
+rect 1765 589 1831 635
+rect 1247 412 1253 478
+rect 1307 412 1313 478
+rect 1247 400 1313 412
+rect 1375 573 1441 585
+rect 1375 519 1381 573
+rect 1435 519 1441 573
+rect 1765 535 1771 589
+rect 1825 535 1831 589
+rect 1765 523 1831 535
+rect 328 327 1027 393
+rect 1375 276 1441 519
+rect 608 262 1441 276
+rect 608 224 620 262
+rect 660 224 1441 262
+rect 608 210 1441 224
+use mux2  mux2_0 ~/magic/library/mag
+timestamp 1741623493
+transform 1 0 4 0 1 0
+box -4 0 646 976
+use mux2  mux2_1
+timestamp 1741623493
+transform 1 0 636 0 1 0
+box -4 0 646 976
+use mux2  mux2_2
+timestamp 1741623493
+transform 1 0 1268 0 1 0
+box -4 0 646 976
+<< labels >>
+flabel locali 4 2 1910 96 0 FreeSerif 160 0 0 0 GND!
+flabel locali 112 514 178 580 0 FreeSerif 160 0 0 0 I0
+port 3 nsew
+flabel locali 502 530 568 596 0 FreeSerif 160 0 0 0 I1
+port 4 nsew
+flabel locali 744 514 810 580 0 FreeSerif 160 0 0 0 I2
+port 5 nsew
+flabel locali 1134 530 1200 596 0 FreeSerif 160 0 0 0 I3
+port 6 nsew
+flabel metal1 220 434 286 500 0 FreeSerif 160 0 0 0 S0
+port 7 nsew
+flabel metal1 328 434 394 500 0 FreeSerif 160 0 0 0 ~S0
+port 8 nsew
+flabel locali 1484 434 1550 500 0 FreeSerif 160 0 0 0 S1
+port 9 nsew
+flabel locali 1592 434 1658 500 0 FreeSerif 160 0 0 0 ~S1
+port 10 nsew
+flabel locali 1836 412 1902 478 0 FreeSerif 160 0 0 0 Y
+port 11 nsew
+flabel locali 4 864 1910 958 0 FreeSerif 160 0 0 0 VDD!
+<< end >>

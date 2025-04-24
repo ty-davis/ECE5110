@@ -1,0 +1,19 @@
+* NGSPICE file created from mux4.ext - technology: sky130A
+
+.subckt mux2 I1 I0 S0 VDD GND Y ~S0
+X0 GND I0 a_72_226# GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.18 ps=1.72 w=0.5 l=0.15
+X1 a_72_226# S0 GND GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.0975 ps=0.89 w=0.5 l=0.15
+X2 Y ~S0 a_72_226# GND sky130_fd_pr__nfet_01v8 ad=0.0975 pd=0.89 as=0.0975 ps=0.89 w=0.5 l=0.15
+X3 a_174_630# I0 VDD VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.36 ps=2.72 w=1 l=0.15
+X4 Y S0 a_174_630# VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.195 ps=1.39 w=1 l=0.15
+X5 a_72_226# I1 Y GND sky130_fd_pr__nfet_01v8 ad=0.18 pd=1.72 as=0.0975 ps=0.89 w=0.5 l=0.15
+X6 a_390_630# ~S0 Y VDD sky130_fd_pr__pfet_01v8 ad=0.195 pd=1.39 as=0.195 ps=1.39 w=1 l=0.15
+X7 VDD I1 a_390_630# VDD sky130_fd_pr__pfet_01v8 ad=0.36 pd=2.72 as=0.195 ps=1.39 w=1 l=0.15
+.ends
+
+*.subckt mux4 I0 I1 I2 I3 S0 ~S0 S1 ~S1 Y
+Xmux2_0 I1 I0 S0 VDD GND mux2_0/Y ~S0 mux2
+Xmux2_1 I3 I2 S0 VDD GND mux2_1/Y ~S0 mux2
+Xmux2_2 mux2_1/Y mux2_0/Y S1 VDD GND Y ~S1 mux2
+*.ends
+

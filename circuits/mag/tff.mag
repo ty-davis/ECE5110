@@ -1,9 +1,62 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1745477860
+timestamp 1745480928
 << locali >>
+rect -296 864 2200 960
 rect 494 412 657 478
+rect -212 346 -158 356
+rect -212 312 -202 346
+rect -168 312 -158 346
+rect 1430 366 1496 432
+rect 1888 370 1954 436
+rect 1990 366 2056 438
+rect -212 302 -158 312
+rect 704 300 770 366
+<< viali >>
+rect 1656 692 1690 730
+rect 109 535 163 589
+rect 510 544 544 578
+rect 219 443 273 497
+rect 331 447 380 496
+rect -202 312 -168 346
+rect -100 341 -66 375
+rect 1784 136 1832 184
+<< metal1 >>
+rect 213 730 1706 744
+rect 213 692 1656 730
+rect 1690 692 1706 730
+rect 213 678 1706 692
+rect -218 589 175 595
+rect -218 535 109 589
+rect 163 535 175 589
+rect -218 529 175 535
+rect -218 346 -152 529
+rect 213 497 279 678
+rect 494 578 560 594
+rect 494 544 510 578
+rect 544 544 560 578
+rect 494 528 560 544
+rect 213 443 219 497
+rect 273 443 279 497
+rect 213 431 279 443
+rect 325 496 386 508
+rect 325 447 331 496
+rect 380 447 386 496
+rect 325 391 386 447
+rect -218 312 -202 346
+rect -168 312 -152 346
+rect -116 375 386 391
+rect -116 341 -100 375
+rect -66 341 386 375
+rect -116 330 386 341
+rect -116 325 -50 330
+rect -218 296 -152 312
+rect 498 190 558 528
+rect 498 184 1844 190
+rect 498 136 1784 184
+rect 1832 136 1844 184
+rect 498 130 1844 136
 use dff  dff_0 ~/magic/library/mag
 timestamp 1741805081
 transform 1 0 620 0 1 0
@@ -16,4 +69,17 @@ use xor  xor_0 ~/magic/library/mag
 timestamp 1741801383
 transform 1 0 -4 0 1 0
 box 22 0 628 976
+<< labels >>
+flabel locali -296 864 2200 960 0 FreeSerif 160 0 0 0 VDD!
+flabel locali -296 0 2200 96 0 FreeSerif 160 0 0 0 GND!
+flabel metal1 -218 362 -152 595 0 FreeSerif 160 0 0 0 T
+port 1 nsew
+flabel locali 704 300 770 366 0 FreeSerif 160 0 0 0 ~CLK
+port 5 nsew
+flabel locali 1430 366 1496 432 0 FreeSerif 160 0 0 0 CLK
+port 4 nsew
+flabel locali 1888 370 1954 436 0 FreeSerif 160 0 0 0 Q
+port 6 nsew
+flabel locali 1990 366 2056 438 0 FreeSerif 160 0 0 0 ~Q
+port 7 nsew
 << end >>

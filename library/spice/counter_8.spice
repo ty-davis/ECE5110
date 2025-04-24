@@ -15,22 +15,22 @@ x3 net1 CLK inv
 x10 VDD net2 Q0 nand
 x11 net3 net2 inv
 x4 net5 Q2 CLK net1 net18 tff
-x5 VDD net4 Q1 nand
+x5 net3 net4 Q1 nand
 x6 net5 net4 inv
 x7 net7 Q3 CLK net1 net19 tff
-x8 VDD net6 Q2 nand
+x8 net5 net6 Q2 nand
 x9 net7 net6 inv
 x12 net9 Q4 CLK net1 net20 tff
-x13 VDD net8 Q3 nand
+x13 net7 net8 Q3 nand
 x14 net9 net8 inv
 x15 net11 Q5 CLK net1 net21 tff
-x16 VDD net10 Q4 nand
+x16 net9 net10 Q4 nand
 x17 net11 net10 inv
 x18 net13 Q6 CLK net1 net22 tff
-x19 VDD net12 Q5 nand
+x19 net11 net12 Q5 nand
 x20 net13 net12 inv
 x21 net15 Q7 CLK net1 net23 tff
-x22 VDD net14 Q6 nand
+x22 net13 net14 Q6 nand
 x23 net15 net14 inv
 **.ends
 

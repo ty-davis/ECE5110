@@ -16,7 +16,7 @@ C8 Q7 GND 1p m=1
 
 .control
 save all
-tran 1n 4u
+tran 1n 80u
 plot V(CLK) V(Q0)+2 V(Q1)+4 V(Q2)+6 V(Q3)+8 V(Q4)+10 V(Q5)+12 V(Q6)+14 V(Q7)+16
 .endc
 
