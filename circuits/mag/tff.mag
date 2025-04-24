@@ -1,0 +1,19 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1745477860
+<< locali >>
+rect 494 412 657 478
+use dff  dff_0 ~/magic/library/mag
+timestamp 1741805081
+transform 1 0 620 0 1 0
+box -4 0 1592 976
+use inv  inv_0 ~/magic/library/mag
+timestamp 1738780557
+transform 1 0 -296 0 1 0
+box -4 0 322 976
+use xor  xor_0 ~/magic/library/mag
+timestamp 1741801383
+transform 1 0 -4 0 1 0
+box 22 0 628 976
+<< end >>
