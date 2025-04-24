@@ -301,18 +301,34 @@ N 510 -10 570 -10 {lab=Wave0}
 N 90 160 530 160 {lab=Wave1}
 N 530 10 530 160 {lab=Wave1}
 N 530 10 570 10 {lab=Wave1}
-N 90 -110 280 -110 {lab=CLK}
 N 460 -110 570 -110 {lab=#net137}
 N 460 -90 570 -90 {lab=#net138}
 N 460 -70 570 -70 {lab=#net139}
 N 460 -50 570 -50 {lab=#net140}
 N 460 -30 570 -30 {lab=#net141}
+N -300 -90 -230 -90 {lab=CLK}
+N -110 -100 -80 -100 {lab=#net142}
+N -110 -80 -80 -80 {lab=#net143}
+N -110 -60 -80 -60 {lab=#net144}
+N -110 -40 -80 -40 {lab=#net145}
+N 20 -300 20 -160 {lab=#net146}
+N -20 -200 -20 -160 {lab=#net147}
+N -60 -420 20 -420 {lab=Freq1}
+N 20 -420 20 -400 {lab=Freq1}
+N -120 -380 -20 -380 {lab=Freq0}
+N -20 -380 -20 -300 {lab=Freq0}
+N -40 -380 -40 -160 {lab=Freq0}
+N 0 -420 -0 -160 {lab=Freq1}
+N 70 -70 160 -70 {lab=#net148}
+N 160 -110 160 -70 {lab=#net148}
+N 160 -110 280 -110 {lab=#net148}
+N 60 -70 70 -70 {lab=#net148}
 C {testing/decoder_5.sym} 720 1160 0 0 {name=x1}
 C {testing/memory_5.sym} 1070 1160 0 0 {name=x2}
 C {counter_8.sym} 370 -40 0 0 {name=x3}
-C {devices/ipin.sym} 90 -110 0 0 {name=p8 lab=CLK}
-C {devices/ipin.sym} 90 -20 0 0 {name=p9 lab=Freq0}
-C {devices/ipin.sym} 90 30 0 0 {name=p10 lab=Freq1}
+C {devices/ipin.sym} -300 -90 0 0 {name=p8 lab=CLK}
+C {devices/ipin.sym} -120 -380 0 0 {name=p9 lab=Freq0}
+C {devices/ipin.sym} -60 -420 0 0 {name=p10 lab=Freq1}
 C {lab1/inv.sym} 1380 -60 0 0 {name=x4}
 C {lab1/inv.sym} 1510 -40 0 0 {name=x5}
 C {lab1/inv.sym} 1640 -20 0 0 {name=x6}
@@ -331,3 +347,7 @@ C {devices/opin.sym} 2410 10 0 0 {name=p6 lab=Y6}
 C {devices/opin.sym} 2410 30 0 0 {name=p7 lab=Y7}
 C {devices/ipin.sym} 90 110 0 0 {name=p12 lab=Wave0}
 C {devices/ipin.sym} 90 160 0 0 {name=p13 lab=Wave1}
+C {mux4.sym} -10 -70 0 0 {name=x12}
+C {counter_4.sym} -170 -70 0 0 {name=x13}
+C {lab1/inv.sym} -70 -300 1 0 {name=x14}
+C {lab1/inv.sym} -30 -400 1 0 {name=x15}

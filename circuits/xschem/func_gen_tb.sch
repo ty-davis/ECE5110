@@ -9,11 +9,11 @@ lab=GND}
 N -70 -170 -70 -130 {
 lab=VDD}
 N 840 -70 920 -70 {
-lab=VDD}
+lab=Freq1}
 N 820 -90 920 -90 {
-lab=VDD}
+lab=Freq0}
 N 800 -50 920 -50 {
-lab=Wave0}
+lab=VDD}
 N 410 -110 570 -110 {
 lab=Clk}
 N 1220 -110 1260 -110 {
@@ -32,14 +32,14 @@ N 1220 10 1260 10 {
 lab=Y6}
 N 1220 30 1260 30 {
 lab=Y7}
-N 690 10 690 30 {
+N 560 -30 560 -10 {
 lab=GND}
-N 770 30 770 50 {
+N 640 -10 640 10 {
 lab=GND}
 N 120 -110 410 -110 {
 lab=Clk}
 N 690 -50 800 -50 {
-lab=Wave0}
+lab=VDD}
 N 1490 -270 1490 -250 {
 lab=#net1}
 N 1490 -270 1620 -270 {
@@ -127,10 +127,12 @@ lab=V0}
 N 2480 -200 2480 -170 {
 lab=GND}
 N 770 -30 920 -30 {
-lab=Wave1}
+lab=VDD}
 N 120 -50 120 -30 {
 lab=GND}
 N 570 -110 920 -110 {lab=Clk}
+N 640 -70 840 -70 {lab=Freq1}
+N 560 -90 820 -90 {lab=Freq0}
 C {devices/vdd.sym} -70 -170 0 0 {name=l1 lab=VDD}
 C {devices/vsource.sym} -70 -100 0 0 {name=V1 value=1.8 savecurrent=false}
 C {devices/gnd.sym} -70 -10 0 0 {name=l2 lab=GND}
@@ -138,7 +140,7 @@ C {devices/code.sym} 60 -360 0 0 {name=s1 only_toplevel=false value="
 .control
 save all
 tran 10n 4u uic
-plot V(CLK) V(Wave0)+2 V(Wave1)+4 V(V0)+6
+plot V(CLK) V(Freq0)+2 V(Freq1)+4 V(V0)+6
 .endc
 "}
 C {devices/code.sym} 480 -320 0 0 {name=TT_MODELS
@@ -159,10 +161,10 @@ C {devices/lab_wire.sym} 1260 30 0 0 {name=p4 sig_type=std_logic lab=Y7}
 C {devices/lab_wire.sym} 1260 -50 0 0 {name=p5 sig_type=std_logic lab=Y3}
 C {devices/lab_wire.sym} 1260 10 0 0 {name=p6 sig_type=std_logic lab=Y6}
 C {devices/lab_wire.sym} 1260 -30 0 0 {name=p7 sig_type=std_logic lab=Y4}
-C {devices/sqwsource.sym} 690 -20 0 0 {name=V3 vhi=1.8 freq=0.5e6}
-C {devices/sqwsource.sym} 770 0 0 0 {name=V4 vhi=1.8 freq=0.25e6}
-C {devices/gnd.sym} 690 30 0 0 {name=l6 lab=GND}
-C {devices/gnd.sym} 770 50 0 0 {name=l7 lab=GND}
+C {devices/sqwsource.sym} 560 -60 0 0 {name=V3 vhi=1.8 freq=0.5e6}
+C {devices/sqwsource.sym} 640 -40 0 0 {name=V4 vhi=1.8 freq=0.25e6}
+C {devices/gnd.sym} 560 -10 0 0 {name=l6 lab=GND}
+C {devices/gnd.sym} 640 10 0 0 {name=l7 lab=GND}
 C {devices/res.sym} 1490 -220 0 0 {name=R1
 value=200k
 footprint=1206
@@ -251,11 +253,11 @@ footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 2480 -170 0 1 {name=l13 lab=GND}
 C {devices/lab_wire.sym} 2420 -270 0 0 {name=p8 sig_type=std_logic lab=V0}
-C {devices/vdd.sym} 840 -70 0 0 {name=l3 lab=VDD}
-C {devices/vdd.sym} 820 -90 0 0 {name=l14 lab=VDD}
+C {devices/vdd.sym} 840 -30 0 0 {name=l3 lab=VDD}
+C {devices/vdd.sym} 800 -50 0 0 {name=l14 lab=VDD}
 C {devices/sqwsource.sym} 120 -80 0 0 {name=V6 vhi=1.8 freq=32e6}
 C {devices/gnd.sym} 120 -30 0 0 {name=l15 lab=GND}
 C {func_gen.sym} 1070 -40 0 0 {name=x1}
-C {devices/lab_wire.sym} 740 -50 0 0 {name=p9 sig_type=std_logic lab=Wave0}
-C {devices/lab_wire.sym} 800 -30 0 0 {name=p10 sig_type=std_logic lab=Wave1}
+C {devices/lab_wire.sym} 740 -90 0 0 {name=p9 sig_type=std_logic lab=Freq0}
+C {devices/lab_wire.sym} 760 -70 0 0 {name=p10 sig_type=std_logic lab=Freq1}
 C {devices/lab_wire.sym} 680 -110 0 0 {name=p11 sig_type=std_logic lab=Clk}
