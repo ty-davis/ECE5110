@@ -1,4 +1,5 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.5 file_version=1.2
+}
 G {}
 K {}
 V {}
@@ -139,7 +140,7 @@ C {devices/gnd.sym} -70 -10 0 0 {name=l2 lab=GND}
 C {devices/code.sym} 60 -360 0 0 {name=s1 only_toplevel=false value="
 .control
 save all
-tran 10n 4u uic
+tran 10n 8u uic
 plot V(CLK) V(Freq0)+2 V(Freq1)+4 V(V0)+6
 .endc
 "}
@@ -161,8 +162,8 @@ C {devices/lab_wire.sym} 1260 30 0 0 {name=p4 sig_type=std_logic lab=Y7}
 C {devices/lab_wire.sym} 1260 -50 0 0 {name=p5 sig_type=std_logic lab=Y3}
 C {devices/lab_wire.sym} 1260 10 0 0 {name=p6 sig_type=std_logic lab=Y6}
 C {devices/lab_wire.sym} 1260 -30 0 0 {name=p7 sig_type=std_logic lab=Y4}
-C {devices/sqwsource.sym} 560 -60 0 0 {name=V3 vhi=1.8 freq=0.5e6}
-C {devices/sqwsource.sym} 640 -40 0 0 {name=V4 vhi=1.8 freq=0.25e6}
+C {devices/sqwsource.sym} 560 -60 0 0 {name=V3 vhi=1.8 freq=0.25e6}
+C {devices/sqwsource.sym} 640 -40 0 0 {name=V4 vhi=1.8 freq=0.125e6}
 C {devices/gnd.sym} 560 -10 0 0 {name=l6 lab=GND}
 C {devices/gnd.sym} 640 10 0 0 {name=l7 lab=GND}
 C {devices/res.sym} 1490 -220 0 0 {name=R1

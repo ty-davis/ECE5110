@@ -1,4 +1,4 @@
-** sch_path: /home/tydav/magic/library/xschem/nor.sch
+** sch_path: /home/tydavis/magic/library/xschem/nor.sch
 **.subckt nor Y A B
 *.ipin A
 *.opin Y
