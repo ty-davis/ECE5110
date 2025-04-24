@@ -1,19 +1,18 @@
-** sch_path: /home/tydav/magic/library/xschem/dff_tb.sch
-**.subckt dff_tb
+** sch_path: /home/tydav/magic/circuits/xschem/tff_tb.sch
+**.subckt tff_tb
 V1 VDD GND 1.8
-V2 D GND pulse 0 1.8 '0.495/ 0.72e6 ' '0.01/0.72e6 ' '0.01/0.72e6 ' '0.49/0.72e6 ' '1/0.72e6 '
-C1 Q GND 1p m=1
-V3 CLK GND pulse 0 1.8 '0.495/ 0.5e6 ' '0.01/0.5e6 ' '0.01/0.5e6 ' '0.49/0.5e6 ' '1/0.5e6 '
+V2 A GND pulse 0 1.8 '0.495/ 0.37e6 ' '0.01/0.37e6 ' '0.01/0.37e6 ' '0.49/0.37e6 ' '1/0.37e6 '
+V3 CLK GND pulse 0 1.8 '0.495/ 1e6 ' '0.01/1e6 ' '0.01/1e6 ' '0.49/1e6 ' '1/1e6 '
+C2 Q GND 1p m=1
+x1 A CLK net1 Q tff
 x2 net1 CLK inv
-x1 net1 D NQ Q CLK dff
-C2 NQ GND 1p m=1
 **** begin user architecture code
 
 
 .control
 save all
-tran 1n 10u
-plot V(D) V(CLK)+2 V(Q)+4 V(NQ)+6
+tran 1n 4u
+plot V(A) V(CLK)+2 V(Q)+6
 .endc
 
 
@@ -24,6 +23,20 @@ plot V(D) V(CLK)+2 V(Q)+4 V(NQ)+6
 
 **** end user architecture code
 **.ends
+
+* expanding   symbol:  tff.sym # of pins=4
+** sym_path: /home/tydav/magic/circuits/xschem/tff.sym
+** sch_path: /home/tydav/magic/circuits/xschem/tff.sch
+.subckt tff T CLK ~CLK Q
+*.ipin T
+*.ipin CLK
+*.ipin ~CLK
+*.opin Q
+x1 ~CLK net2 net1 Q CLK dff
+x2 Q net2 T net3 net1 xor
+x3 net3 T inv
+.ends
+
 
 * expanding   symbol:  lab1/inv.sym # of pins=2
 ** sym_path: /home/tydav/magic/library/xschem/lab1/inv.sym
@@ -79,6 +92,34 @@ XM15 net3 ~CLK net4 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM16 net3 CLK net4 GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29'
 + pd='2*int((nf+1)/2) * (W/nf + 0.29)' ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  xor.sym # of pins=5
+** sym_path: /home/tydav/magic/library/xschem/xor.sym
+** sch_path: /home/tydav/magic/library/xschem/xor.sch
+.subckt xor B Y A ~A ~B
+*.opin Y
+*.ipin A
+*.ipin ~B
+*.ipin B
+*.ipin ~A
+XM1 Y ~A net1 GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net4 B VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM3 net3 A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM4 Y B net2 GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM5 net1 ~B GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM6 net2 A GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM7 Y ~A net4 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM8 Y ~B net3 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 .ends
 
 .GLOBAL VDD

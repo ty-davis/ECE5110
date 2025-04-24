@@ -1,5 +1,4 @@
-v {xschem version=3.4.5 file_version=1.2
-}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -267,7 +266,7 @@ N 2370 -270 2480 -270 {
 lab=V0}
 N 2480 -270 2480 -260 {
 lab=V0}
-N 2480 -200 2480 -170 {
+N 2510 -90 2510 -60 {
 lab=GND}
 N 870 1150 920 1150 {
 lab=#net75}
@@ -526,12 +525,12 @@ value=100k
 footprint=1206
 device=resistor
 m=1}
-C {devices/capa.sym} 2480 -230 0 0 {name=C1
+C {devices/capa.sym} 2510 -120 0 0 {name=C1
 m=1
 value=200f
 footprint=1206
 device="ceramic capacitor"}
-C {devices/gnd.sym} 2480 -170 0 1 {name=l13 lab=GND}
+C {devices/gnd.sym} 2510 -60 0 1 {name=l13 lab=GND}
 C {devices/lab_wire.sym} 2420 -270 0 0 {name=p8 sig_type=std_logic lab=V0}
 C {devices/vdd.sym} 490 10 0 0 {name=l3 lab=VDD}
 C {devices/vdd.sym} 470 -10 0 0 {name=l14 lab=VDD}

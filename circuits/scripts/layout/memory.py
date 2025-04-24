@@ -21,6 +21,13 @@ ADDRS_WAVE = {
     '11': 'sine',
 }
 
+the_port_num = 100
+def label(x1, y1, x2, y2, lab, layer='locali'):
+    global the_port_num
+    port_num = the_port_num
+    the_port_num += 1
+    return f"flabel {layer} {x1} {y1} {x2} {y2} 0 FreeSerif 160 0 0 0 {lab}\nport {port_num} nsew\n"
+
 with open('num_bits_per_channel.txt', 'r') as fin:
     num_bits_per_channel = int(fin.read().strip())
 
@@ -46,6 +53,8 @@ NDIFF_RIGHT_OVERHANG    = NDIFF_WIDTH - BITLINE_WIDTH - NDIFF_LEFT_OVERHANG
 
 POLY_LENGTH             = NUM_BIT_AND_GROUND * (BITLINE_WIDTH + BITLINE_GAP) + POLY_LEFT_OVERHANG + POLY_RIGHT_OVERHANG
 BITLINE_LENGTH          = NUM_WORDS * (POLY_WIDTH + POLY_GAP) + BITLINE_TOP_OFFSET + BITLINE_BOTTOM_OFFSET
+PAD_SIZE                = 33
+LI_GAP                  = 17
 
 GLOBAL_GROUND_WIDTH     = 48
 GLOBAL_GROUND_BOT_GAP   = 17
@@ -108,24 +117,54 @@ def print_memory():
         print()
 
 def poly_lines(poly_left, poly_top):
-    poly = ""
+    out = {
+        layer: "" for layer in [
+            'poly',
+            'locali',
+            'labels',
+            'polycont',
+            ]
+    }
     for i in range(NUM_WORDS):
         x1 = poly_left
         x2 = poly_left + POLY_LENGTH
         y1 = poly_top - POLY_WIDTH - (POLY_WIDTH + POLY_GAP) * i
         y2 = poly_top - (POLY_WIDTH + POLY_GAP) * i
-        poly += f"rect {x1} {y1} {x2} {y2}\n"
-    return poly
+        out['poly'] += f"rect {x1} {y1} {x2} {y2}\n"
+        x2 = poly_left + POLY_LEFT_OVERHANG - 34
+        x1 = x2 - PAD_SIZE
+        y1 = y1 - (PAD_SIZE - POLY_WIDTH) // 2
+        y2 = y1 + PAD_SIZE
+        out['poly'] += f"rect {x1} {y1} {x2} {y2}\n"
+        out['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+        out['polycont'] += f"rect {x1 + 8} {y1 + 8} {x2 - 8} {y2 - 8}\n"
+        out['labels'] += label(x1, y1, x2, y2, f"word{i}")
+
+    return out
 
 def locali_lines(li_left, li_top):
-    locali = ""
+    out = {
+        layer: "" for layer in [ 'locali', 'labels']
+    }
+    bit_line_decider = -1
+    bit_num = WORD_SIZE - 1
     for i in range(NUM_BIT_AND_GROUND):
         x1 = li_left + i * (BITLINE_WIDTH + BITLINE_GAP)
         x2 = x1 + BITLINE_WIDTH
         y1 = li_top - BITLINE_LENGTH
         y2 = li_top
-        locali += f"rect {x1} {y1} {x2} {y2}\n"
-    return locali
+        out['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+        if bit_line_decider < 0:
+            # it is a bitline if it is less than 0
+            bit_line_decider += 1
+            y1 -= PAD_SIZE
+            y2 = y1 + PAD_SIZE
+            out['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+            out['labels'] += label(x1, y1, x2, y2, f"Y{bit_num}")
+            bit_num -= 1
+        else:
+            bit_line_decider = -2
+    return out
 
 def pull_ups():
     obj = {
@@ -193,6 +232,7 @@ def grounds_and_vdd():
         'polycont': "",
         'nsubdiff': "",
         'nsubdiffcont': "",
+        'labels': "",
     }
 
     # draw the ground area
@@ -201,6 +241,7 @@ def grounds_and_vdd():
     y1 = HEADER_START_HEIGHT + BITLINE_WIDTH + GLOBAL_GROUND_BOT_GAP
     y2 = y1 + GLOBAL_GROUND_WIDTH
     obj['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
+    obj['labels'] += label(x1, y1, x2, y2, "GND!")
 
     y1 += GLOBAL_GROUND_PSUB_BOT
     y2 -= GLOBAL_GROUND_PSUB_BOT
@@ -235,7 +276,7 @@ def grounds_and_vdd():
     x1 = -NWELL_LEFT_OVERHANG + VDD_EDGE_GAP
     x2 = bit_line_position(0) + BITLINE_WIDTH + NWELL_RIGHT_OVERHANG - VDD_EDGE_GAP
     obj['locali'] += f"rect {x1} {y1} {x2} {y2}\n"
-    # TODO: INSERT LABEL FOR VDD HERE
+    obj['labels'] += label(x1, y1, x2, y2, "VDD!")
     x1 += NSUB_EDGE_GAP
     x2 -= NSUB_EDGE_GAP
     y1 += NSUB_VERT_GAP
@@ -451,15 +492,20 @@ def main():
         'locali',
         'viali',
         'metal1',
+        'labels',
     ]
     blocks = {block: f"<< {block} >>\n" for block in blocks_names }
 
     # write all of the polysilicon lines
-    blocks['poly'] += poly_lines(-POLY_LEFT_OVERHANG, 0)
+    poly_stuff = poly_lines(-POLY_LEFT_OVERHANG, 0)
+    for k, v in poly_stuff.items():
+        blocks[k] += v
 
 
     # write all of the ground and bit lines (locali)
-    blocks['locali'] += locali_lines(0, BITLINE_TOP_OFFSET)
+    locali_stuff = locali_lines(0, BITLINE_TOP_OFFSET)
+    for k, v in locali_stuff.items():
+        blocks[k] += v
 
 
     # write all of the ndiff/contacts according to the logic

@@ -111,8 +111,8 @@ C {devices/lab_wire.sym} 410 0 0 1 {name=p5 sig_type=std_logic lab=GND}
 C {devices/lab_wire.sym} 490 0 0 1 {name=p6 sig_type=std_logic lab=GND}
 C {devices/lab_wire.sym} 570 0 0 1 {name=p7 sig_type=std_logic lab=GND}
 C {sky130_fd_pr/pfet_01v8.sym} 50 -80 0 0 {name=M1
-L=0.15
-W=1
+L=0.17
+W=0.51
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -127,8 +127,8 @@ spiceprefix=X
 C {devices/lab_wire.sym} 20 -80 0 0 {name=p8 sig_type=std_logic lab=GND}
 C {devices/vdd.sym} 70 -120 0 0 {name=l2 lab=VDD}
 C {sky130_fd_pr/pfet_01v8.sym} 130 -80 0 0 {name=M2
-L=0.15
-W=1
+L=0.17
+W=0.51
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -141,8 +141,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 210 -80 0 0 {name=M3
-L=0.15
-W=1
+L=0.17
+W=0.51
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -155,8 +155,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 290 -80 0 0 {name=M4
-L=0.15
-W=1
+L=0.17
+W=0.51
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -169,8 +169,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 370 -80 0 0 {name=M5
-L=0.15
-W=1
+L=0.17
+W=0.51
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -183,8 +183,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 450 -80 0 0 {name=M6
-L=0.15
-W=1
+L=0.17
+W=0.51
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -197,8 +197,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 530 -80 0 0 {name=M7
-L=0.15
-W=1
+L=0.17
+W=0.51
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 
@@ -211,8 +211,8 @@ model=pfet_01v8
 spiceprefix=X
 }
 C {sky130_fd_pr/pfet_01v8.sym} 610 -80 0 0 {name=M8
-L=0.15
-W=1
+L=0.17
+W=0.51
 nf=1
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

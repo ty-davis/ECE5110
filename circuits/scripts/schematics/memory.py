@@ -70,8 +70,8 @@ lab={bit}}}
 N {x+70} {y+50} {x+70} {y+60} {{
 lab={bit}}}
 C {{sky130_fd_pr/nfet_01v8.sym}} {x+40} {y+30} 1 0 {{name=M{dev}
-L=0.15
-W=1
+L=0.17
+W=0.51
 nf=1 
 mult=1
 ad="'int((nf+1)/2) * W/nf * 0.29'" 

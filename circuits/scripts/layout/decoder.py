@@ -176,11 +176,13 @@ def n_trns(left, top):
                 # no transistor then yes transistor
                 out['ndiff'] += rect(x1_other, y1, x2_other, y2)
                 out['ndiff'] += rect(x1_other_pad, y1, x2_other_pad, y2)
+                out['ndiffc'] += rect(x1_other_pad, y1, x2_other_pad, y2, 8)
 
                 # for final one, other pad needs locali
                 if i == len(addr_s_back) - 1:
                     out['locali'] += rect(x1_other_pad, y1, x2_other_pad, y2)
                     out['ndiffc'] += rect(x1_other_pad, y1, x2_other_pad, y2, 8)
+                    out['viali'] += rect(x1_other_pad, y1, x2_other_pad, y2, 8)
 
             if i == len(addr_s_back) - 1:
                 # also add that little label

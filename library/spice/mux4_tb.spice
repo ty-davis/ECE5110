@@ -1,0 +1,93 @@
+** sch_path: /home/tydav/magic/circuits/xschem/mux4_tb.sch
+**.subckt mux4_tb
+V1 VDD GND 1.8
+V2 I0 GND pulse 0 1.8 '0.495/ 10e6 ' '0.01/10e6 ' '0.01/10e6 ' '0.49/10e6 ' '1/10e6 '
+V3 I2 GND pulse 0 1.8 '0.495/ 5e6 ' '0.01/5e6 ' '0.01/5e6 ' '0.49/5e6 ' '1/5e6 '
+C2 Y GND 1p m=1
+V4 I1 GND pulse 0 1.8 '0.495/ 20e6 ' '0.01/20e6 ' '0.01/20e6 ' '0.49/20e6 ' '1/20e6 '
+x1 S0 net1 S1 net2 I0 I1 Y I2 I3 mux4
+V5 I3 GND pulse 0 1.8 '0.495/ 2.5e6 ' '0.01/2.5e6 ' '0.01/2.5e6 ' '0.49/2.5e6 ' '1/2.5e6 '
+V6 S0 GND pulse 0 1.8 '0.495/ 1e6 ' '0.01/1e6 ' '0.01/1e6 ' '0.49/1e6 ' '1/1e6 '
+V7 S1 GND pulse 0 1.8 '0.495/ 0.5e6 ' '0.01/0.5e6 ' '0.01/0.5e6 ' '0.49/0.5e6 ' '1/0.5e6 '
+x2 net1 S0 inv
+x3 net2 S1 inv
+**** begin user architecture code
+
+
+.control
+save all
+tran 1n 4u
+plot V(Y) V(S0)+2 V(S1)+4
+.endc
+
+
+
+** opencircuitdesign pdks install
+.lib /usr/local/share/pdk/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  mux4.sym # of pins=9
+** sym_path: /home/tydav/magic/circuits/xschem/mux4.sym
+** sch_path: /home/tydav/magic/circuits/xschem/mux4.sch
+.subckt mux4 S0 ~S0 S1 ~S1 I0 I1 Y I2 I3
+*.ipin I0
+*.ipin I1
+*.ipin I2
+*.ipin I3
+*.ipin S0
+*.ipin ~S0
+*.ipin S1
+*.ipin ~S1
+*.opin Y
+x1 I1 I0 S0 net1 ~S0 mux2
+x2 I3 I2 S0 net2 ~S0 mux2
+x3 net2 net1 S1 Y ~S1 mux2
+.ends
+
+
+* expanding   symbol:  lab1/inv.sym # of pins=2
+** sym_path: /home/tydav/magic/library/xschem/lab1/inv.sym
+** sch_path: /home/tydav/magic/library/xschem/lab1/inv.sch
+.subckt inv Y A
+*.ipin A
+*.opin Y
+XM1 Y A GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 Y A VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+
+* expanding   symbol:  mux2.sym # of pins=5
+** sym_path: /home/tydav/magic/library/xschem/mux2.sym
+** sch_path: /home/tydav/magic/library/xschem/mux2.sch
+.subckt mux2 I1 I0 S0 Y ~S0
+*.ipin I1
+*.ipin I0
+*.ipin S0
+*.opin Y
+*.ipin ~S0
+XM9 Y S0 net1 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM10 Y ~S0 net3 GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM11 net1 I0 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM12 net2 I1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM13 net3 I0 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM14 Y I1 net3 GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM1 Y ~S0 net2 VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+XM2 net3 S0 GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
++ ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
+.ends
+
+.GLOBAL VDD
+.GLOBAL GND
+.end
