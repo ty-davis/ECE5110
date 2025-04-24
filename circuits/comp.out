@@ -1,197 +1,633 @@
 
-Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
-Equate elements:  no current cell.
-Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
-
 Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
 Equate elements:  no current cell.
 Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
 
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+Flattening unmatched subcell inv in circuit ../library/spice/decoder_out.spice (1)(4 instances)
+
 Subcircuit summary:
-Circuit 1: scripts/layout/decoder_test.spi |Circuit 2: ../library/spice/decoder_out_2_ 
+Circuit 1: scripts/layout/decoder_out.spic |Circuit 2: ../library/spice/decoder_out.sp 
 -------------------------------------------|-------------------------------------------
-sky130_fd_pr__pfet_01v8 (28)               |sky130_fd_pr__pfet_01v8 (28)               
-sky130_fd_pr__nfet_01v8 (28)               |sky130_fd_pr__nfet_01v8 (28)               
-Number of devices: 56                      |Number of devices: 56                      
-Number of nets: 37                         |Number of nets: 37                         
+sky130_fd_pr__nfet_01v8 (72)               |sky130_fd_pr__nfet_01v8 (68) **Mismatch**  
+sky130_fd_pr__pfet_01v8 (72)               |sky130_fd_pr__pfet_01v8 (68) **Mismatch**  
+Number of devices: 144 **Mismatch**        |Number of devices: 136 **Mismatch**        
+Number of nets: 98 **Mismatch**            |Number of nets: 74 **Mismatch**            
 ---------------------------------------------------------------------------------------
-Resolving symmetries by property value.
-Resolving symmetries by pin name.
-Resolving symmetries by net name.
-Netlists match with 18 symmetries with property errors.
-sky130_fd_pr__nfet_01v8:8 vs. sky130_fd_pr__nfet_01v8:M6:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:48 vs. sky130_fd_pr__nfet_01v8:M0:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:17 vs. sky130_fd_pr__nfet_01v8:M1:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:52 vs. sky130_fd_pr__nfet_01v8:M3:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:29 vs. sky130_fd_pr__nfet_01v8:M4:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:22 vs. sky130_fd_pr__nfet_01v8:M2:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:33 vs. sky130_fd_pr__nfet_01v8:M5:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:27 vs. sky130_fd_pr__nfet_01v8:M15:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:35 vs. sky130_fd_pr__nfet_01v8:M18:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:30 vs. sky130_fd_pr__nfet_01v8:M16:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:5 vs. sky130_fd_pr__nfet_01v8:M17:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:42 vs. sky130_fd_pr__nfet_01v8:M19:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:1 vs. sky130_fd_pr__nfet_01v8:M14:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:47 vs. sky130_fd_pr__nfet_01v8:M20:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:44 vs. sky130_fd_pr__nfet_01v8:M43:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:43 vs. sky130_fd_pr__nfet_01v8:M31:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:23 vs. sky130_fd_pr__nfet_01v8:M55:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:12 vs. sky130_fd_pr__nfet_01v8:M41:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:51 vs. sky130_fd_pr__nfet_01v8:M45:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:39 vs. sky130_fd_pr__nfet_01v8:M29:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:50 vs. sky130_fd_pr__nfet_01v8:M49:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:18 vs. sky130_fd_pr__nfet_01v8:M35:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:19 vs. sky130_fd_pr__nfet_01v8:M47:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:14 vs. sky130_fd_pr__nfet_01v8:M33:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:28 vs. sky130_fd_pr__nfet_01v8:M51:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:11 vs. sky130_fd_pr__nfet_01v8:M37:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:36 vs. sky130_fd_pr__nfet_01v8:M53:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__nfet_01v8:3 vs. sky130_fd_pr__nfet_01v8:M39:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:32 vs. sky130_fd_pr__pfet_01v8:M7:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:10 vs. sky130_fd_pr__pfet_01v8:M21:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:31 vs. sky130_fd_pr__pfet_01v8:M26:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:24 vs. sky130_fd_pr__pfet_01v8:M12:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:13 vs. sky130_fd_pr__pfet_01v8:M22:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:7 vs. sky130_fd_pr__pfet_01v8:M8:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:55 vs. sky130_fd_pr__pfet_01v8:M9:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:4 vs. sky130_fd_pr__pfet_01v8:M23:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:46 vs. sky130_fd_pr__pfet_01v8:M24:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:38 vs. sky130_fd_pr__pfet_01v8:M10:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:37 vs. sky130_fd_pr__pfet_01v8:M11:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:49 vs. sky130_fd_pr__pfet_01v8:M25:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:21 vs. sky130_fd_pr__pfet_01v8:M42:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:20 vs. sky130_fd_pr__pfet_01v8:M30:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:54 vs. sky130_fd_pr__pfet_01v8:M13:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:6 vs. sky130_fd_pr__pfet_01v8:M27:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:41 vs. sky130_fd_pr__pfet_01v8:M40:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:2 vs. sky130_fd_pr__pfet_01v8:M54:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:26 vs. sky130_fd_pr__pfet_01v8:M44:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:16 vs. sky130_fd_pr__pfet_01v8:M28:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:53 vs. sky130_fd_pr__pfet_01v8:M34:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:25 vs. sky130_fd_pr__pfet_01v8:M48:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:40 vs. sky130_fd_pr__pfet_01v8:M36:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:9 vs. sky130_fd_pr__pfet_01v8:M50:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:45 vs. sky130_fd_pr__pfet_01v8:M32:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:0 vs. sky130_fd_pr__pfet_01v8:M46:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:34 vs. sky130_fd_pr__pfet_01v8:M38:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
-sky130_fd_pr__pfet_01v8:15 vs. sky130_fd_pr__pfet_01v8:M52:
- l circuit1: 0.17   circuit2: 0.15   (delta=12.5%, cutoff=1%)
- w circuit1: 0.43   circuit2: 1   (delta=79.7%, cutoff=1%)
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: scripts/layout/decoder_out.spic |Circuit 2: ../library/spice/decoder_out.sp 
+
+---------------------------------------------------------------------------------------
+Net: word0                                 |Net: word0                                 
+  sky130_fd_pr__nfet_01v8/(1|3) = 4        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: word1                                 |Net: word1                                 
+  sky130_fd_pr__nfet_01v8/(1|3) = 4        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: word2                                 |Net: word2                                 
+  sky130_fd_pr__nfet_01v8/(1|3) = 4        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: word3                                 |Net: word3                                 
+  sky130_fd_pr__nfet_01v8/(1|3) = 3        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: word4                                 |Net: word4                                 
+  sky130_fd_pr__nfet_01v8/(1|3) = 4        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: word5                                 |Net: word5                                 
+  sky130_fd_pr__nfet_01v8/(1|3) = 4        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: word6                                 |Net: word6                                 
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 3        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+                                           |                                           
+Net: word7                                 |Net: word7                                 
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+                                           |                                           
+Net: word8                                 |Net: word8                                 
+  sky130_fd_pr__nfet_01v8/(1|3) = 3        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: word9                                 |Net: word9                                 
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 3        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+                                           |                                           
+Net: word10                                |Net: word10                                
+  sky130_fd_pr__nfet_01v8/(1|3) = 3        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: word11                                |Net: word11                                
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: word12                                |Net: word12                                
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: word13                                |Net: word13                                
+  sky130_fd_pr__nfet_01v8/(1|3) = 2        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |                                           
+Net: word14                                |Net: word14                                
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+                                           |                                           
+Net: word15                                |Net: word15                                
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+                                           |  sky130_fd_pr__nfet_01v8/(1|3) = 4        
+                                           |                                           
+Net: a_2236_164#                           |Net: N_A0                                  
+  sky130_fd_pr__nfet_01v8/2 = 8            |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/2 = 8            
+                                           |  sky130_fd_pr__pfet_01v8/2 = 8            
+                                           |                                           
+Net: a_1708_164#                           |Net: N_A3                                  
+  sky130_fd_pr__nfet_01v8/2 = 8            |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/2 = 8            
+                                           |  sky130_fd_pr__pfet_01v8/2 = 8            
+                                           |                                           
+Net: a_1444_164#                           |Net: N_A1                                  
+  sky130_fd_pr__nfet_01v8/2 = 8            |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/2 = 8            
+                                           |  sky130_fd_pr__pfet_01v8/2 = 8            
+                                           |                                           
+Net: a_1972_164#                           |Net: N_A2                                  
+  sky130_fd_pr__nfet_01v8/2 = 8            |  sky130_fd_pr__nfet_01v8/(1|3) = 1        
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |  sky130_fd_pr__pfet_01v8/(1|3) = 1        
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |  sky130_fd_pr__nfet_01v8/2 = 8            
+                                           |  sky130_fd_pr__pfet_01v8/2 = 8            
+                                           |                                           
+Net: A0                                    |Net: A0                                    
+  sky130_fd_pr__nfet_01v8/2 = 10           |  sky130_fd_pr__nfet_01v8/2 = 9            
+  sky130_fd_pr__pfet_01v8/2 = 10           |  sky130_fd_pr__pfet_01v8/2 = 9            
+                                           |                                           
+Net: A3                                    |Net: A3                                    
+  sky130_fd_pr__nfet_01v8/2 = 10           |  sky130_fd_pr__nfet_01v8/2 = 9            
+  sky130_fd_pr__pfet_01v8/2 = 10           |  sky130_fd_pr__pfet_01v8/2 = 9            
+                                           |                                           
+Net: A1                                    |Net: A1                                    
+  sky130_fd_pr__pfet_01v8/2 = 10           |  sky130_fd_pr__pfet_01v8/2 = 9            
+  sky130_fd_pr__nfet_01v8/2 = 10           |  sky130_fd_pr__nfet_01v8/2 = 9            
+                                           |                                           
+Net: A2                                    |Net: A2                                    
+  sky130_fd_pr__pfet_01v8/2 = 10           |  sky130_fd_pr__pfet_01v8/2 = 9            
+  sky130_fd_pr__nfet_01v8/2 = 10           |  sky130_fd_pr__nfet_01v8/2 = 9            
+                                           |                                           
+Net: GND                                   |Net: GND                                   
+  sky130_fd_pr__nfet_01v8/(1|3) = 72       |  sky130_fd_pr__nfet_01v8/(1|3) = 68       
+  sky130_fd_pr__nfet_01v8/4 = 72           |  sky130_fd_pr__nfet_01v8/4 = 68           
+                                           |                                           
+Net: VDD                                   |Net: VDD                                   
+  sky130_fd_pr__pfet_01v8/4 = 72           |  sky130_fd_pr__pfet_01v8/4 = 68           
+  sky130_fd_pr__pfet_01v8/(1|3) = 24       |  sky130_fd_pr__pfet_01v8/(1|3) = 20       
+                                           |                                           
+Net: a_2028_n1904#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_2292_n1620#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_1764_n2330#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_2292_n1478#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_1764_n2188#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_2028_n2046#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_2028_n2330#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_1500_n1194#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_2028_n2188#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_2292_n1904#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_1764_n1052#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_2292_n1762#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_1764_n1194#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_2292_n2046#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_528_n66#                            |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+  sky130_fd_pr__pfet_01v8/2 = 8            |                                           
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_2292_n2330#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_1500_n1762#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_2292_n2188#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_1500_n626#                          |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_264_n66#                            |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/2 = 8            |                                           
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_1500_n2330#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_792_n66#                            |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/2 = 8            |                                           
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_2292_n1336#                         |(no matching net)                          
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+                                           |                                           
+Net: a_0_n66#                              |(no matching net)                          
+  sky130_fd_pr__pfet_01v8/2 = 8            |                                           
+  sky130_fd_pr__nfet_01v8/(1|3) = 1        |                                           
+  sky130_fd_pr__pfet_01v8/(1|3) = 1        |                                           
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: scripts/layout/decoder_out.spic |Circuit 2: ../library/spice/decoder_out.sp 
+
+---------------------------------------------------------------------------------------
+Instance: sky130_fd_pr__nfet_01v8:0        |Instance: inv:0/sky130_fd_pr__nfet_01v8:M1 
+  (1,3) = (144,4)                          |  (1,3) = (136,18)                         
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:3        |Instance: inv:1/sky130_fd_pr__nfet_01v8:M1 
+  (1,3) = (144,1)                          |  (1,3) = (136,18)                         
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:4        |Instance: inv:2/sky130_fd_pr__nfet_01v8:M1 
+  (1,3) = (144,5)                          |  (1,3) = (136,18)                         
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:5        |Instance: inv:3/sky130_fd_pr__nfet_01v8:M1 
+  (1,3) = (144,5)                          |  (1,3) = (136,18)                         
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:6        |Instance: sky130_fd_pr__nfet_01v8:M0       
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:7        |Instance: sky130_fd_pr__nfet_01v8:M1       
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:10       |Instance: sky130_fd_pr__nfet_01v8:M2       
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:14       |Instance: sky130_fd_pr__nfet_01v8:M3       
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:15       |Instance: sky130_fd_pr__nfet_01v8:M8       
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:19       |Instance: sky130_fd_pr__nfet_01v8:M9       
+  (1,3) = (144,10)                         |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:20       |Instance: sky130_fd_pr__nfet_01v8:M10      
+  (1,3) = (144,3)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:21       |Instance: sky130_fd_pr__nfet_01v8:M11      
+  (1,3) = (144,10)                         |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:23       |Instance: sky130_fd_pr__nfet_01v8:M16      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:24       |Instance: sky130_fd_pr__nfet_01v8:M17      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:30       |Instance: sky130_fd_pr__nfet_01v8:M18      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:32       |Instance: sky130_fd_pr__nfet_01v8:M19      
+  (1,3) = (144,3)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:33       |Instance: sky130_fd_pr__nfet_01v8:M24      
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:34       |Instance: sky130_fd_pr__nfet_01v8:M25      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:35       |Instance: sky130_fd_pr__nfet_01v8:M26      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:38       |Instance: sky130_fd_pr__nfet_01v8:M27      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:39       |Instance: sky130_fd_pr__nfet_01v8:M32      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:40       |Instance: sky130_fd_pr__nfet_01v8:M33      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:43       |Instance: sky130_fd_pr__nfet_01v8:M34      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:44       |Instance: sky130_fd_pr__nfet_01v8:M35      
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:45       |Instance: sky130_fd_pr__nfet_01v8:M40      
+  (1,3) = (144,10)                         |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:47       |Instance: sky130_fd_pr__nfet_01v8:M41      
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:50       |Instance: sky130_fd_pr__nfet_01v8:M42      
+  (1,3) = (144,3)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:51       |Instance: sky130_fd_pr__nfet_01v8:M43      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:56       |Instance: sky130_fd_pr__nfet_01v8:M48      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:57       |Instance: sky130_fd_pr__nfet_01v8:M49      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:58       |Instance: sky130_fd_pr__nfet_01v8:M50      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:60       |Instance: sky130_fd_pr__nfet_01v8:M51      
+  (1,3) = (144,3)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:62       |Instance: sky130_fd_pr__nfet_01v8:M56      
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:64       |Instance: sky130_fd_pr__nfet_01v8:M57      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:70       |Instance: sky130_fd_pr__nfet_01v8:M58      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:71       |Instance: sky130_fd_pr__nfet_01v8:M59      
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:74       |Instance: sky130_fd_pr__nfet_01v8:M64      
+  (1,3) = (144,10)                         |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:76       |Instance: sky130_fd_pr__nfet_01v8:M65      
+  (1,3) = (144,10)                         |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:78       |Instance: sky130_fd_pr__nfet_01v8:M66      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:80       |Instance: sky130_fd_pr__nfet_01v8:M67      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:82       |Instance: sky130_fd_pr__nfet_01v8:M72      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:83       |Instance: sky130_fd_pr__nfet_01v8:M73      
+  (1,3) = (144,3)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:84       |Instance: sky130_fd_pr__nfet_01v8:M74      
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:89       |Instance: sky130_fd_pr__nfet_01v8:M75      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:94       |Instance: sky130_fd_pr__nfet_01v8:M80      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:95       |Instance: sky130_fd_pr__nfet_01v8:M81      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:96       |Instance: sky130_fd_pr__nfet_01v8:M82      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:99       |Instance: sky130_fd_pr__nfet_01v8:M83      
+  (1,3) = (144,10)                         |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:100      |Instance: sky130_fd_pr__nfet_01v8:M88      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:101      |Instance: sky130_fd_pr__nfet_01v8:M89      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:105      |Instance: sky130_fd_pr__nfet_01v8:M90      
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:106      |Instance: sky130_fd_pr__nfet_01v8:M91      
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:107      |Instance: sky130_fd_pr__nfet_01v8:M96      
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:108      |Instance: sky130_fd_pr__nfet_01v8:M97      
+  (1,3) = (144,2)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:110      |Instance: sky130_fd_pr__nfet_01v8:M98      
+  (1,3) = (144,3)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:114      |Instance: sky130_fd_pr__nfet_01v8:M99      
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:115      |Instance: sky130_fd_pr__nfet_01v8:M104     
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:116      |Instance: sky130_fd_pr__nfet_01v8:M105     
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:117      |Instance: sky130_fd_pr__nfet_01v8:M106     
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:119      |Instance: sky130_fd_pr__nfet_01v8:M107     
+  (1,3) = (144,10)                         |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:120      |Instance: sky130_fd_pr__nfet_01v8:M112     
+  (1,3) = (144,5)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:125      |Instance: sky130_fd_pr__nfet_01v8:M113     
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:126      |Instance: sky130_fd_pr__nfet_01v8:M114     
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:127      |Instance: sky130_fd_pr__nfet_01v8:M115     
+  (1,3) = (144,3)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:128      |Instance: sky130_fd_pr__nfet_01v8:M120     
+  (1,3) = (144,3)                          |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:132      |Instance: sky130_fd_pr__nfet_01v8:M121     
+  (1,3) = (144,1)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:133      |Instance: sky130_fd_pr__nfet_01v8:M122     
+  (1,3) = (144,4)                          |  (1,3) = (136,5)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:134      |Instance: sky130_fd_pr__nfet_01v8:M123     
+  (1,3) = (144,10)                         |  (1,3) = (136,5)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 136                                  
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:135      |Instance: inv:0/sky130_fd_pr__pfet_01v8:M2 
+  (1,3) = (144,4)                          |  (1,3) = (88,18)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 88                                   
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:137      |Instance: inv:1/sky130_fd_pr__pfet_01v8:M2 
+  (1,3) = (144,4)                          |  (1,3) = (88,18)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 88                                   
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:141      |Instance: inv:2/sky130_fd_pr__pfet_01v8:M2 
+  (1,3) = (144,1)                          |  (1,3) = (88,18)                          
+  2 = 10                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 88                                   
+                                           |                                           
+Instance: sky130_fd_pr__nfet_01v8:143      |Instance: inv:3/sky130_fd_pr__pfet_01v8:M2 
+  (1,3) = (144,5)                          |  (1,3) = (88,18)                          
+  2 = 20                                   |  2 = 18                                   
+  4 = 144                                  |  4 = 88                                   
+                                           |                                           
+Instance: sky130_fd_pr__pfet_01v8:26       |(no matching instance)                     
+  (1,3) = (96,10)                          |                                           
+  2 = 20                                   |                                           
+  4 = 96                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: sky130_fd_pr__pfet_01v8:28       |(no matching instance)                     
+  (1,3) = (96,10)                          |                                           
+  2 = 20                                   |                                           
+  4 = 96                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: sky130_fd_pr__pfet_01v8:49       |(no matching instance)                     
+  (1,3) = (96,10)                          |                                           
+  2 = 20                                   |                                           
+  4 = 96                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: sky130_fd_pr__pfet_01v8:77       |(no matching instance)                     
+  (1,3) = (96,10)                          |                                           
+  2 = 20                                   |                                           
+  4 = 96                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: sky130_fd_pr__pfet_01v8:81       |(no matching instance)                     
+  (1,3) = (96,10)                          |                                           
+  2 = 20                                   |                                           
+  4 = 96                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: sky130_fd_pr__pfet_01v8:102      |(no matching instance)                     
+  (1,3) = (96,10)                          |                                           
+  2 = 20                                   |                                           
+  4 = 96                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: sky130_fd_pr__pfet_01v8:122      |(no matching instance)                     
+  (1,3) = (96,10)                          |                                           
+  2 = 20                                   |                                           
+  4 = 96                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: sky130_fd_pr__pfet_01v8:142      |(no matching instance)                     
+  (1,3) = (96,10)                          |                                           
+  2 = 20                                   |                                           
+  4 = 96                                   |                                           
+                                           |                                           
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
 Cells have no pins;  pin matching not needed.
-Device classes scripts/layout/decoder_test.spice and ../library/spice/decoder_out_2_rows.spice are equivalent.
+Device classes scripts/layout/decoder_out.spice and ../library/spice/decoder_out.spice are equivalent.
 
-Final result: Circuits match uniquely.
-Property errors were found.
-
-The following cells had property errors:
- scripts/layout/decoder_test.spice
+Final result: Netlists do not match.
+Port matching may fail to disambiguate symmetries.

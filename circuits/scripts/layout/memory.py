@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import math
+from common import bin_n
 from pprint import pprint
 import re
 
@@ -98,9 +99,6 @@ def ramp(x, period=32):
 def sine(x, period=32):
     return int(np.sin((x-(period/4))/period * 2 * np.pi) * 127.5 + 128)
 
-def bin_n(val: int, w: int):
-    s = bin(val)[2:]
-    return '0' * (w - len(s)) + s
 
 def print_memory():
     for i in range(4):
